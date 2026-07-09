@@ -542,8 +542,10 @@ I specialize in PC repair, custom computer builds, hardware upgrades, and optimi
 <h2>Contact</h2>
 
 <form action="https://formspree.io/f/xvzjjnzq" method="POST">
-   
+
 <input type="hidden" name="_subject" value="New Mountain Tech Solutions Quote Request">
+
+<input type="text" name="_gotcha" style="display:none">
 
 <input type="text" name="name" placeholder="Your Name" required>
 
@@ -551,25 +553,52 @@ I specialize in PC repair, custom computer builds, hardware upgrades, and optimi
 
 <input type="tel" name="phone" placeholder="Phone Number">
 
-<select name="service" required>
-<option value="">Select a Service</option>
-<option>PC Repair</option>
-<option>Virus & Malware Removal</option>
-<option>Custom Gaming PC Build</option>
-<option>Hardware Upgrade</option>
-<option>Remote Support</option>
+
+<label for="category">Service Category</label>
+
+<select id="category" name="category" required onchange="updateServices()">
+
+<option value="">Select a Category</option>
+
+<option value="computer">🛠️ Computer Services</option>
+
+<option value="newcomputer">🖥️ New Computer Services</option>
+
+<option value="remote">🌐 Remote Support</option>
+
+<option value="gaming">🎮 Custom Gaming PC Builds</option>
+
+<option value="hardware">⚙️ Hardware Upgrades</option>
+
 </select>
 
-<textarea name="message" placeholder="Describe your request" required></textarea>
 
-<input type="text" name="_gotcha" style="display:none">
+<label for="services">Select Service(s)</label>
+
+<select id="services" name="services[]" multiple size="8" required>
+
+<option value="">Choose a category first</option>
+
+</select>
+
+
+<textarea 
+name="message" 
+placeholder="Tell us about your computer issue or project"
+required></textarea>
+
+
 <button type="submit">Send Message</button>
 
 </form>
 
+
 <p class="note">
-Your message will be sent securely. We will respond as soon as possible.
+Hold CTRL (Windows) or CMD (Mac) to select multiple services.
+<br>
+Your information is sent securely. We will respond as soon as possible.
 </p>
+
 
 </section>
 
@@ -606,6 +635,112 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
+
+
+
+function updateServices() {
+
+    const category = document.getElementById("category").value;
+
+    const serviceBox = document.getElementById("services");
+
+    serviceBox.innerHTML = "";
+
+
+    let services = [];
+
+
+    if (category === "computer") {
+
+        services = [
+            "Not Sure / Need Diagnosis - $39",
+            "Computer Diagnostic - $39",
+            "PC Tune-Up - $69",
+            "Virus & Malware Removal - $79",
+            "Windows Repair - $89",
+            "Windows Reinstallation - $129",
+            "Slow Computer Optimization - $69",
+            "Blue Screen / Boot Issues - $89",
+            "Software Installation - $29+"
+        ];
+
+    } 
+
+    else if (category === "newcomputer") {
+
+        services = [
+            "Not Sure / Need Diagnosis - $39",
+            "New PC Setup - $99",
+            "File Transfer (Old → New PC) - $99",
+            "Email Setup - $39",
+            "Microsoft Office Setup - $39",
+            "Printer Setup - $49",
+            "Home Wi-Fi Setup - $79"
+        ];
+
+    } 
+
+    else if (category === "remote") {
+
+        services = [
+            "Not Sure / Need Diagnosis - $39",
+            "Remote Diagnostic - $29",
+            "Remote Support Session (Up to 1 Hour) - $59",
+            "Virus Removal - $79",
+            "Software Installation - $39",
+            "Printer Troubleshooting - $49",
+            "Email Support & Setup - $39",
+            "Windows Errors & Fixes - $59",
+            "Performance Issues - $69",
+            "General Tech Support - $59/hr",
+            "Remote Training - $49/hr"
+        ];
+
+    }
+
+    else if (category === "gaming") {
+
+        services = [
+            "Not Sure / Need Diagnosis - $39",
+            "Custom Gaming PC Consultation",
+            "Gaming PC Assembly - Starting $199",
+            "BIOS Configuration",
+            "Cable Management",
+            "Performance Optimization",
+            "Stress Testing"
+        ];
+
+    }
+
+    else if (category === "hardware") {
+
+        services = [
+            "Not Sure / Need Diagnosis - $39",
+            "SSD Upgrade - $89 + Parts",
+            "RAM Upgrade - $59 + Parts",
+            "Graphics Card Install - $99 + Parts",
+            "CPU Upgrade - $129 + Parts",
+            "Power Supply Install - $79 + Parts",
+            "Cooling Upgrade - $69 + Parts",
+            "General Hardware Installation - $59+"
+        ];
+
+    }
+
+
+    services.forEach(function(service) {
+
+        let option = document.createElement("option");
+
+        option.value = service;
+
+        option.textContent = service;
+
+        serviceBox.appendChild(option);
+
+    });
+
+}
 
 </script>
 
