@@ -293,6 +293,27 @@ input, textarea, select {
     color: #e5e7eb;
 }
 
+.service-checkboxes {
+    margin-top: 16px;
+    text-align: left;
+}
+
+.service-checkboxes label {
+    display: block;
+    background: #020617;
+    border: 1px solid #1e293b;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #e5e7eb;
+}
+
+.service-checkboxes input {
+    width: auto;
+    margin-right: 10px;
+}
+
 input:focus,
 textarea:focus {
     outline: none;
@@ -573,13 +594,11 @@ I specialize in PC repair, custom computer builds, hardware upgrades, and optimi
 </select>
 
 
-<label for="services">Select Service(s)</label>
+<label>Select Service(s)</label>
 
-<select id="services" name="services[]" multiple size="8" required>
-
-<option value="">Choose a category first</option>
-
-</select>
+<div id="services" class="service-checkboxes">
+    <p>Select a category first.</p>
+</div>
 
 
 <textarea 
@@ -594,7 +613,11 @@ required></textarea>
 
 
 <p class="note">
-Hold CTRL (Windows) or CMD (Mac) to select multiple services.
+<p class="note">
+Select all services that apply. Your information is sent securely.
+<br>
+We will respond as soon as possible.
+</p>
 <br>
 Your information is sent securely. We will respond as soon as possible.
 </p>
@@ -669,7 +692,7 @@ function updateServices() {
     else if (category === "newcomputer") {
 
         services = [
-            "Not Sure / Need Diagnosis - $39",
+            "Not Sure - Let us diagnose the issue",
             "New PC Setup - $99",
             "File Transfer (Old → New PC) - $99",
             "Email Setup - $39",
@@ -683,7 +706,7 @@ function updateServices() {
     else if (category === "remote") {
 
         services = [
-            "Not Sure / Need Diagnosis - $39",
+            "Not Sure - Let us diagnose the issue",
             "Remote Diagnostic - $29",
             "Remote Support Session (Up to 1 Hour) - $59",
             "Virus Removal - $79",
@@ -701,9 +724,9 @@ function updateServices() {
     else if (category === "gaming") {
 
         services = [
-            "Not Sure / Need Diagnosis - $39",
+            "Not Sure - Let us diagnose the issue",
             "Custom Gaming PC Consultation",
-            "Gaming PC Assembly - Starting $199",
+            "Gaming PC Build Service - $199+",
             "BIOS Configuration",
             "Cable Management",
             "Performance Optimization",
@@ -715,7 +738,7 @@ function updateServices() {
     else if (category === "hardware") {
 
         services = [
-            "Not Sure / Need Diagnosis - $39",
+            "Not Sure - Let us diagnose the issue",
             "SSD Upgrade - $89 + Parts",
             "RAM Upgrade - $59 + Parts",
             "Graphics Card Install - $99 + Parts",
@@ -730,13 +753,23 @@ function updateServices() {
 
     services.forEach(function(service) {
 
-        let option = document.createElement("option");
+        let label = document.createElement("label");
 
-        option.value = service;
+        let checkbox = document.createElement("input");
 
-        option.textContent = service;
+        checkbox.type = "checkbox";
 
-        serviceBox.appendChild(option);
+        checkbox.name = "services[]";
+
+        checkbox.value = service;
+
+
+        label.appendChild(checkbox);
+
+        label.appendChild(document.createTextNode(" " + service));
+
+
+        serviceBox.appendChild(label);
 
     });
 
