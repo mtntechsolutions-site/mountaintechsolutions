@@ -541,20 +541,20 @@ I specialize in PC repair, custom computer builds, hardware upgrades, and optimi
 
 <h2>Contact</h2>
 
-<form id="contactForm">
+<form action="https://formspree.io/f/xvzjjnzq" method="POST">
 
-<input type="text" placeholder="Your Name" required>
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Your Email" required>
+<input type="email" name="email" placeholder="Your Email" required>
 
-<textarea placeholder="Describe your request" required></textarea>
+<textarea name="message" placeholder="Describe your request" required></textarea>
 
 <button type="submit">Send Message</button>
 
 </form>
 
 <p class="note">
-*Demo form — connect to email backend later
+Your message will be sent securely. We will respond as soon as possible.
 </p>
 
 </section>
@@ -568,15 +568,6 @@ I specialize in PC repair, custom computer builds, hardware upgrades, and optimi
 
 
 <script>
-
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-
-    e.preventDefault();
-
-    alert("Message sent! (Demo only)");
-
-});
-
 
 const reveals = document.querySelectorAll(".reveal");
 
