@@ -201,12 +201,13 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            transition: transform 0.25s, box-shadow 0.25s;
+            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
         }
 
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 35px 70px rgba(0, 0, 0, 0.6);
+            border-color: #334155;
         }
 
         .card h3 {
@@ -255,9 +256,14 @@
             color: #64748b;
         }
 
+        /*
+           Pricing cards are intentionally
+           all the same color and border.
+        */
+
         .pricing-highlight {
-            border-color: #2563eb;
-            box-shadow: 0 0 30px rgba(37, 99, 235, 0.12);
+            border-color: #1e293b;
+            box-shadow: none;
         }
 
         .badge {
@@ -533,7 +539,9 @@
         class="logo"
     >
 
-    <h1>Mountain Tech Solutions</h1>
+    <h1>
+        Mountain Tech Solutions
+    </h1>
 
     <p>
         Professional Virus Removal • Custom Gaming PCs •
@@ -549,13 +557,21 @@
 
 <nav>
 
-    <a href="#gallery">Gallery</a>
+    <a href="#gallery">
+        Gallery
+    </a>
 
-    <a href="#pricing">Services & Pricing</a>
+    <a href="#pricing">
+        Services & Pricing
+    </a>
 
-    <a href="#about">About</a>
+    <a href="#about">
+        About
+    </a>
 
-    <a href="#contact">Contact</a>
+    <a href="#contact">
+        Contact
+    </a>
 
 </nav>
 
@@ -906,7 +922,7 @@
         </div>
 
 
-        <!-- CUSTOM GAMING PC -->
+        <!-- CUSTOM GAMING PCS -->
 
         <div class="card pricing-highlight">
 
@@ -965,7 +981,7 @@
         </div>
 
 
-        <!-- BUILD TIERS -->
+        <!-- BUILD SERVICE TIERS -->
 
         <div class="card">
 
@@ -1130,7 +1146,7 @@
         >
 
 
-        <!-- CATEGORY -->
+        <!-- SERVICE CATEGORY -->
 
         <label for="category">
             Service Category
@@ -1176,7 +1192,7 @@
         </select>
 
 
-        <!-- DYNAMIC SERVICES -->
+        <!-- SERVICE OPTIONS -->
 
         <label>
             Select Service(s)
@@ -1204,7 +1220,7 @@
         ></textarea>
 
 
-        <!-- SUBMIT -->
+        <!-- SUBMIT BUTTON -->
 
         <button type="submit">
             Request My Free Quote
@@ -1248,14 +1264,16 @@
    SCROLL REVEAL
 ========================== */
 
-const reveals = document.querySelectorAll(".reveal");
+const reveals =
+    document.querySelectorAll(".reveal");
 
 
 function revealOnScroll() {
 
     reveals.forEach(function(el) {
 
-        const top = el.getBoundingClientRect().top;
+        const top =
+            el.getBoundingClientRect().top;
 
 
         if (top < window.innerHeight - 100) {
@@ -1294,7 +1312,7 @@ function updateServices() {
 
 
     /*
-       Clear the previous services
+       Clear previous options.
     */
 
     serviceBox.innerHTML = "";
@@ -1458,24 +1476,16 @@ function updateServices() {
 
     services.forEach(function(service) {
 
-
-        /*
-           Create label
-        */
-
         const label =
             document.createElement("label");
 
-
-        /*
-           Create checkbox
-        */
 
         const checkbox =
             document.createElement("input");
 
 
-        checkbox.type = "checkbox";
+        checkbox.type =
+            "checkbox";
 
 
         checkbox.name =
@@ -1486,18 +1496,10 @@ function updateServices() {
             service;
 
 
-        /*
-           Put checkbox inside label
-        */
-
         label.appendChild(
             checkbox
         );
 
-
-        /*
-           Add service text
-        */
 
         label.appendChild(
             document.createTextNode(
@@ -1505,11 +1507,6 @@ function updateServices() {
             )
         );
 
-
-        /*
-           Add completed label
-           to the form
-        */
 
         serviceBox.appendChild(
             label
