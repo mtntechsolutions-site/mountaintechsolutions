@@ -3,23 +3,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
 
 ```
-<title>Mountain Tech Solutions | PC Repair, Virus Removal & Custom Builds</title>
+<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+    Mountain Tech Solutions | PC Repair, Virus Removal & Custom Builds
+</title>
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <meta
     name="description"
-    content="Mountain Tech Solutions provides professional PC repair, virus removal, custom gaming PC builds, upgrades, and computer services in North Georgia. Professional service at startup-friendly prices."
+    content="Mountain Tech Solutions provides affordable professional PC repair, virus removal, computer upgrades, custom gaming PC builds, and technical support in North Georgia."
 >
 
 <style>
 
-    /* ==========================
+    /* =========================================================
        RESET & BASE
-    ========================== */
+    ========================================================= */
 
     * {
         margin: 0;
@@ -33,231 +39,498 @@
     }
 
     body {
-        background: radial-gradient(circle at top, #0f172a, #020617);
+        background:
+            radial-gradient(
+                circle at top,
+                #0f172a,
+                #020617
+            );
+
         color: #e5e7eb;
+
         line-height: 1.7;
     }
 
 
-    /* ==========================
+    /* =========================================================
        HEADER
-    ========================== */
+    ========================================================= */
 
     header {
+
         padding: 90px 20px 70px;
+
         text-align: center;
-        border-bottom: 1px solid #1e293b;
+
+        border-bottom:
+            1px solid #1e293b;
+
         background:
-            linear-gradient(180deg, rgba(37, 99, 235, 0.18), transparent),
+            linear-gradient(
+                180deg,
+                rgba(37,99,235,0.18),
+                transparent
+            ),
             #020617;
     }
 
     header h1 {
+
         font-size: 3rem;
+
         font-weight: 700;
+
         letter-spacing: 0.5px;
+
+        text-shadow:
+            0 0 20px rgba(56,189,248,0.12);
     }
 
     header p {
+
         margin-top: 14px;
+
         font-size: 1.05rem;
+
         color: #94a3b8;
     }
 
     .logo {
+
         width: 105px !important;
+
         height: auto !important;
+
         display: block;
-        margin: 0 auto 15px auto;
+
+        margin:
+            0 auto 15px auto;
     }
 
 
-    /* ==========================
+    /* =========================================================
        NAVIGATION
-    ========================== */
+    ========================================================= */
 
     nav {
+
         position: sticky;
+
         top: 0;
+
         z-index: 100;
-        background: rgba(2, 6, 23, 0.92);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid #1e293b;
+
+        background:
+            rgba(2,6,23,0.92);
+
+        backdrop-filter:
+            blur(8px);
+
+        border-bottom:
+            1px solid #1e293b;
+
         text-align: center;
+
         padding: 14px;
     }
 
     nav a {
+
         color: #cbd5f5;
+
         margin: 0 18px;
+
         text-decoration: none;
+
         font-size: 15px;
+
         font-weight: 500;
+
+        transition:
+            color 0.2s ease;
     }
 
     nav a:hover {
+
         color: #38bdf8;
+
+        text-shadow:
+            0 0 10px rgba(56,189,248,0.5);
     }
 
 
-    /* ==========================
+    /* =========================================================
        HERO
-    ========================== */
+    ========================================================= */
 
     .hero {
-        padding: 120px 20px 90px;
+
+        padding:
+            120px 20px 90px;
+
         text-align: center;
     }
 
     .hero h2 {
+
         font-size: 2.7rem;
+
         font-weight: 700;
+
         color: #38bdf8;
+
+        text-shadow:
+            0 0 20px rgba(56,189,248,0.18);
     }
 
     .hero p {
-        max-width: 760px;
-        margin: 18px auto 0;
+
+        max-width: 780px;
+
+        margin:
+            18px auto 0;
+
         color: #9ca3af;
+
         font-size: 1.1rem;
     }
 
     .btn {
+
         display: inline-block;
+
         margin-top: 40px;
-        padding: 16px 46px;
-        background: linear-gradient(135deg, #2563eb, #38bdf8);
+
+        padding:
+            16px 46px;
+
+        background:
+            linear-gradient(
+                135deg,
+                #2563eb,
+                #38bdf8
+            );
+
         color: #020617;
+
         font-weight: 600;
+
         border-radius: 8px;
+
         text-decoration: none;
-        transition: transform 0.2s, box-shadow 0.2s;
+
+        transition:
+            transform 0.2s,
+            box-shadow 0.2s;
     }
 
     .btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 25px 45px rgba(56, 189, 248, 0.4);
+
+        transform:
+            translateY(-4px);
+
+        box-shadow:
+            0 0 15px
+            rgba(56,189,248,0.5),
+
+            0 20px 45px
+            rgba(37,99,235,0.3);
     }
 
 
-    /* ==========================
+    /* =========================================================
        TRUST BADGES
-    ========================== */
+    ========================================================= */
 
     .trust {
+
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(220px,1fr)
+            );
+
         gap: 30px;
+
         max-width: 1000px;
-        margin: 40px auto 0;
+
+        margin:
+            40px auto 0;
+
         text-align: center;
     }
 
     .trust div {
+
         padding: 26px;
-        border: 1px solid #1e293b;
+
+        border:
+            1px solid #1e293b;
+
         border-radius: 14px;
+
         background: #020617;
     }
 
     .trust h4 {
+
         color: #38bdf8;
+
         margin-bottom: 10px;
     }
 
+    .trust p {
 
-    /* ==========================
+        color: #94a3b8;
+    }
+
+
+    /* =========================================================
        SECTIONS
-    ========================== */
+    ========================================================= */
 
     section {
+
         max-width: 1200px;
+
         margin: auto;
-        padding: 100px 20px;
+
+        padding:
+            100px 20px;
     }
 
     section h2 {
+
         text-align: center;
+
         font-size: 2.3rem;
+
         margin-bottom: 70px;
+
+        color: #e5e7eb;
     }
 
 
-    /* ==========================
-       CARDS
-    ========================== */
+    /* =========================================================
+       CARD GRID
+    ========================================================= */
 
     .grid {
+
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(280px,1fr)
+            );
+
         gap: 36px;
     }
 
+
+    /* =========================================================
+       NEON PRICING CARDS
+    ========================================================= */
+
     .card {
-        background: #020617;
 
-        /*
-           Neon blue border on EVERY card
-        */
+        background:
+            rgba(2,6,23,0.95);
 
-        border: 1px solid #2563eb;
+        border:
+            1px solid #2563eb;
 
         border-radius: 16px;
-        padding: 42px 32px;
+
+        padding:
+            42px 32px;
+
         text-align: center;
+
         position: relative;
+
         overflow: hidden;
 
-        /*
-           Subtle always-on neon glow
-        */
-
         box-shadow:
-            0 0 8px rgba(37, 99, 235, 0.25),
-            0 0 20px rgba(37, 99, 235, 0.12);
+
+            0 0 7px
+            rgba(37,99,235,0.30),
+
+            0 0 18px
+            rgba(37,99,235,0.16);
 
         transition:
-            transform 0.25s,
-            box-shadow 0.25s,
-            border-color 0.25s;
+
+            transform 0.25s ease,
+
+            border-color 0.25s ease,
+
+            box-shadow 0.25s ease;
     }
 
 
-    /*
-       Stronger neon effect when hovering
-    */
+    /* subtle inner neon line */
+
+    .card::before {
+
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+
+        left: 10%;
+
+        width: 80%;
+
+        height: 1px;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                #38bdf8,
+                transparent
+            );
+
+        opacity: 0.65;
+    }
+
 
     .card:hover {
 
-        transform: translateY(-10px);
+        transform:
+            translateY(-10px);
 
-        border-color: #38bdf8;
+        border-color:
+            #38bdf8;
 
         box-shadow:
-            0 0 10px rgba(56, 189, 248, 0.65),
-            0 0 25px rgba(56, 189, 248, 0.45),
-            0 0 55px rgba(37, 99, 235, 0.25),
-            0 35px 70px rgba(0, 0, 0, 0.6);
+
+            0 0 10px
+            rgba(56,189,248,0.7),
+
+            0 0 25px
+            rgba(56,189,248,0.45),
+
+            0 0 55px
+            rgba(37,99,235,0.25),
+
+            0 35px 70px
+            rgba(0,0,0,0.65);
     }
 
     .card h3 {
+
         color: #38bdf8;
+
         margin-bottom: 16px;
+
         font-size: 1.3rem;
+
+        text-shadow:
+            0 0 10px
+            rgba(56,189,248,0.18);
     }
 
     .card p {
+
         color: #9ca3af;
     }
 
 
-    /* ==========================
+    /* =========================================================
+       BADGES
+    ========================================================= */
+
+    .badge {
+
+        display: inline-block;
+
+        padding:
+            5px 12px;
+
+        margin-bottom: 14px;
+
+        border-radius: 20px;
+
+        background:
+            rgba(37,99,235,0.15);
+
+        border:
+            1px solid
+            rgba(56,189,248,0.45);
+
+        color: #38bdf8;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        box-shadow:
+            0 0 10px
+            rgba(56,189,248,0.15);
+    }
+
+
+    /* =========================================================
        PRICING
-    ========================== */
+    ========================================================= */
+
+    .pricing-list {
+
+        margin-top: 22px;
+
+        list-style: none;
+
+        padding: 0;
+
+        font-size: 14px;
+
+        color: #9ca3af;
+    }
+
+    .pricing-list li {
+
+        margin: 11px 0;
+
+        padding-bottom: 5px;
+
+        border-bottom:
+            1px solid
+            rgba(30,41,59,0.35);
+    }
+
+    .pricing-list li:last-child {
+
+        border-bottom: none;
+    }
+
+    .pricing-list strong {
+
+        color: #e5e7eb;
+
+        font-weight: 600;
+    }
+
+    .price-note {
+
+        margin-top: 20px;
+
+        font-size: 12px;
+
+        color: #64748b;
+    }
 
     .amount {
+
         font-size: 2.1rem;
+
         font-weight: 700;
+
         margin-top: 14px;
 
         background:
@@ -268,212 +541,280 @@
             );
 
         -webkit-background-clip: text;
+
         -webkit-text-fill-color: transparent;
     }
 
-    .pricing-list {
-        margin-top: 22px;
-        list-style: none;
-        padding: 0;
-        font-size: 14px;
-        color: #9ca3af;
-    }
 
-    .pricing-list li {
-        margin: 10px 0;
-    }
-
-    .pricing-list strong {
-        color: #e5e7eb;
-    }
-
-    .price-note {
-        margin-top: 20px;
-        font-size: 13px;
-        color: #64748b;
-    }
-
-
-    /*
-       These cards intentionally use the
-       exact same neon styling as every
-       other pricing card.
-    */
-
-    .pricing-highlight {
-        border: 1px solid #2563eb;
-
-        box-shadow:
-            0 0 8px rgba(37, 99, 235, 0.25),
-            0 0 20px rgba(37, 99, 235, 0.12);
-    }
-
-    .pricing-highlight:hover {
-
-        border-color: #38bdf8;
-
-        box-shadow:
-            0 0 10px rgba(56, 189, 248, 0.65),
-            0 0 25px rgba(56, 189, 248, 0.45),
-            0 0 55px rgba(37, 99, 235, 0.25),
-            0 35px 70px rgba(0, 0, 0, 0.6);
-    }
-
-
-    /* ==========================
-       BADGES
-    ========================== */
-
-    .badge {
-        display: inline-block;
-        padding: 5px 12px;
-        margin-bottom: 14px;
-        border-radius: 20px;
-
-        background: rgba(37, 99, 235, 0.15);
-
-        border: 1px solid rgba(56, 189, 248, 0.35);
-
-        color: #38bdf8;
-
-        font-size: 12px;
-        font-weight: 600;
-
-        box-shadow:
-            0 0 10px rgba(56, 189, 248, 0.12);
-    }
-
-
-    /* ==========================
+    /* =========================================================
        GALLERY
-    ========================== */
+    ========================================================= */
 
     .gallery-grid {
+
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(320px,1fr)
+            );
+
         gap: 40px;
     }
 
     .gallery-item {
+
         background: #020617;
-        border: 1px solid #1e293b;
+
+        border:
+            1px solid #1e293b;
+
         border-radius: 18px;
+
         overflow: hidden;
-        transition: transform 0.25s, box-shadow 0.25s;
+
+        transition:
+            transform 0.25s,
+            box-shadow 0.25s;
     }
 
     .gallery-item img {
+
         width: 100%;
+
         height: 100%;
+
         object-fit: cover;
+
         display: block;
     }
 
     .gallery-item:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+
+        transform:
+            translateY(-8px);
+
+        box-shadow:
+            0 30px 60px
+            rgba(0,0,0,0.6);
     }
 
 
-    /* ==========================
+    /* =========================================================
        ABOUT
-    ========================== */
+    ========================================================= */
 
     .about-container {
+
         display: grid;
-        grid-template-columns: 260px 1fr;
+
+        grid-template-columns:
+            260px 1fr;
+
         gap: 50px;
+
         align-items: center;
     }
 
     .about-container img {
+
         width: 100%;
+
         border-radius: 16px;
-        border: 1px solid #1e293b;
+
+        border:
+            1px solid #1e293b;
     }
 
     .about-text p {
+
         color: #9ca3af;
+
         font-size: 1.1rem;
+
         margin-bottom: 18px;
     }
 
 
-    /* ==========================
+    /* =========================================================
        CONTACT
-    ========================== */
+    ========================================================= */
 
     form {
+
         max-width: 520px;
+
         margin: auto;
     }
 
     input,
     textarea,
     select {
+
         width: 100%;
+
         padding: 15px;
+
         margin-top: 16px;
+
         background: #020617;
-        border: 1px solid #1e293b;
+
+        border:
+            1px solid #1e293b;
+
         border-radius: 8px;
+
         color: #e5e7eb;
-    }
 
-    select {
-        cursor: pointer;
-    }
-
-    form label {
-        display: block;
-        margin-top: 18px;
-        color: #cbd5e1;
-        font-size: 14px;
-        text-align: left;
-    }
-
-    .service-checkboxes {
-        margin-top: 16px;
-        text-align: left;
-    }
-
-    .service-checkboxes label {
-        display: block;
-        background: #020617;
-        border: 1px solid #1e293b;
-        padding: 12px;
-        border-radius: 8px;
-        margin-bottom: 8px;
-        cursor: pointer;
-        color: #e5e7eb;
-        transition: border-color 0.2s, background 0.2s;
-    }
-
-    .service-checkboxes label:hover {
-        border-color: #38bdf8;
-        background: #071126;
-    }
-
-    .service-checkboxes input {
-        width: auto;
-        margin-right: 10px;
+        font-size: 15px;
     }
 
     input:focus,
     textarea:focus,
     select:focus {
+
         outline: none;
-        border-color: #38bdf8;
+
+        border-color:
+            #38bdf8;
+
+        box-shadow:
+            0 0 10px
+            rgba(56,189,248,0.15);
+    }
+
+    form label {
+
+        display: block;
+
+        margin-top: 18px;
+
+        text-align: left;
+
+        color: #cbd5e1;
+
+        font-size: 14px;
     }
 
     textarea {
+
         min-height: 150px;
+
         resize: vertical;
     }
 
+
+    /* =========================================================
+       SERVICE CHECKBOXES
+    ========================================================= */
+
+    .service-checkboxes {
+
+        margin-top: 16px;
+
+        text-align: left;
+    }
+
+    .service-checkboxes label {
+
+        display: block;
+
+        background: #020617;
+
+        border:
+            1px solid #1e293b;
+
+        padding: 12px;
+
+        border-radius: 8px;
+
+        margin-bottom: 8px;
+
+        cursor: pointer;
+
+        color: #e5e7eb;
+
+        transition:
+            border-color 0.2s,
+            background 0.2s;
+    }
+
+    .service-checkboxes label:hover {
+
+        border-color:
+            #38bdf8;
+
+        background:
+            #071126;
+
+        box-shadow:
+            0 0 8px
+            rgba(56,189,248,0.10);
+    }
+
+    .service-checkboxes input {
+
+        width: auto;
+
+        margin-right: 10px;
+    }
+
+
+    /* =========================================================
+       QUOTE NOTE
+    ========================================================= */
+
+    .diagnostic-note {
+
+        max-width: 520px;
+
+        margin:
+            0 auto 35px;
+
+        padding: 18px;
+
+        border:
+            1px solid #2563eb;
+
+        border-radius: 12px;
+
+        background:
+            rgba(37,99,235,0.08);
+
+        box-shadow:
+
+            0 0 10px
+            rgba(37,99,235,0.18),
+
+            0 0 25px
+            rgba(37,99,235,0.08);
+
+        text-align: center;
+    }
+
+    .diagnostic-note strong {
+
+        display: block;
+
+        color: #38bdf8;
+
+        margin-bottom: 5px;
+
+        font-size: 18px;
+    }
+
+
+    /* =========================================================
+       BUTTON
+    ========================================================= */
+
     button {
+
         margin-top: 24px;
+
         width: 100%;
+
         padding: 16px;
 
         background:
@@ -484,9 +825,13 @@
             );
 
         color: #020617;
-        font-weight: 600;
+
+        font-weight: 700;
+
         border: none;
+
         border-radius: 8px;
+
         cursor: pointer;
 
         transition:
@@ -495,112 +840,127 @@
     }
 
     button:hover {
-        transform: translateY(-3px);
+
+        transform:
+            translateY(-3px);
 
         box-shadow:
-            0 0 15px rgba(56, 189, 248, 0.35),
-            0 15px 35px rgba(37, 99, 235, 0.25);
+
+            0 0 15px
+            rgba(56,189,248,0.4),
+
+            0 15px 35px
+            rgba(37,99,235,0.25);
     }
 
     .note {
+
         margin-top: 18px;
+
         text-align: center;
+
         font-size: 14px;
+
         color: #6b7280;
     }
 
-    .diagnostic-note {
-        max-width: 520px;
-        margin: 0 auto 35px;
-        padding: 18px;
 
-        border: 1px solid #2563eb;
-        border-radius: 12px;
-
-        background:
-            rgba(37, 99, 235, 0.08);
-
-        box-shadow:
-            0 0 15px rgba(37, 99, 235, 0.12);
-
-        text-align: center;
-    }
-
-    .diagnostic-note strong {
-        color: #38bdf8;
-        display: block;
-        margin-bottom: 5px;
-    }
-
-
-    /* ==========================
+    /* =========================================================
        FOOTER
-    ========================== */
+    ========================================================= */
 
     footer {
+
         padding: 40px;
+
         text-align: center;
-        border-top: 1px solid #1e293b;
+
+        border-top:
+            1px solid #1e293b;
+
         background: #020617;
+
         color: #9ca3af;
     }
 
 
-    /* ==========================
-       ANIMATIONS
-    ========================== */
+    /* =========================================================
+       ANIMATION
+    ========================================================= */
 
     .reveal {
+
         opacity: 0;
-        transform: translateY(40px);
-        transition: all 0.7s ease;
+
+        transform:
+            translateY(40px);
+
+        transition:
+            all 0.7s ease;
     }
 
     .reveal.visible {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 
 
-    /* ==========================
+    /* =========================================================
        MOBILE
-    ========================== */
+    ========================================================= */
 
     @media (max-width: 768px) {
 
         header h1 {
+
             font-size: 2.3rem;
         }
 
         .hero {
-            padding: 80px 20px 70px;
+
+            padding:
+                80px 20px 70px;
         }
 
         .hero h2 {
+
             font-size: 2rem;
         }
 
         nav a {
+
             margin: 0 7px;
+
             font-size: 13px;
         }
 
         section {
-            padding: 70px 20px;
+
+            padding:
+                70px 20px;
         }
 
         section h2 {
+
             font-size: 2rem;
+
             margin-bottom: 45px;
         }
 
         .about-container {
+
             grid-template-columns: 1fr;
+
             text-align: center;
         }
 
         .about-container img {
+
             max-width: 260px;
+
             margin: auto;
         }
 
@@ -613,9 +973,9 @@
 
 <body>
 
-<!-- ==========================
+<!-- =========================================================
      HEADER
-========================== -->
+========================================================= -->
 
 <header>
 
@@ -638,9 +998,9 @@
 
 </header>
 
-<!-- ==========================
+<!-- =========================================================
      NAVIGATION
-========================== -->
+========================================================= -->
 
 <nav>
 
@@ -664,9 +1024,9 @@
 
 </nav>
 
-<!-- ==========================
+<!-- =========================================================
      HERO
-========================== -->
+========================================================= -->
 
 <section class="hero reveal">
 
@@ -677,16 +1037,20 @@
 
 <p>
     Professional PC repair, malware removal, computer optimization,
-    hardware upgrades, and custom gaming systems built for performance
-    and reliability — without the big-box repair shop price.
+    hardware upgrades, and custom gaming systems built for
+    performance and reliability — at startup-friendly prices.
 </p>
 
-<a href="#contact" class="btn">
+<a
+    href="#contact"
+    class="btn"
+>
     Get a Free Quote
 </a>
 
 
 <div class="trust">
+
 
     <div>
 
@@ -695,7 +1059,8 @@
         </h4>
 
         <p>
-            Experienced technician with professional IT experience
+            Experienced IT technician with professional
+            troubleshooting experience.
         </p>
 
     </div>
@@ -704,11 +1069,12 @@
     <div>
 
         <h4>
-            ⚡ Startup-Friendly Pricing
+            ⚡ Competitive Pricing
         </h4>
 
         <p>
-            Quality technical service at competitive local prices
+            Quality computer service without
+            big-box repair shop pricing.
         </p>
 
     </div>
@@ -721,7 +1087,8 @@
         </h4>
 
         <p>
-            Your computer and personal data are treated with care
+            Your computer and personal data
+            are handled with care.
         </p>
 
     </div>
@@ -731,11 +1098,14 @@
 
 </section>
 
-<!-- ==========================
+<!-- =========================================================
      GALLERY
-========================== -->
+========================================================= -->
 
-<section id="gallery" class="reveal">
+<section
+    id="gallery"
+    class="reveal"
+>
 
 ```
 <h2>
@@ -744,6 +1114,7 @@
 
 
 <div class="gallery-grid">
+
 
     <div class="gallery-item">
 
@@ -769,11 +1140,14 @@
 
 </section>
 
-<!-- ==========================
+<!-- =========================================================
      SERVICES & PRICING
-========================== -->
+========================================================= -->
 
-<section id="pricing" class="reveal">
+<section
+    id="pricing"
+    class="reveal"
+>
 
 ```
 <h2>
@@ -784,9 +1158,11 @@
 <div class="grid">
 
 
-    <!-- COMPUTER REPAIR -->
+    <!-- =====================================================
+         COMPUTER REPAIR
+    ====================================================== -->
 
-    <div class="card pricing-highlight">
+    <div class="card">
 
         <span class="badge">
             MOST POPULAR
@@ -811,45 +1187,50 @@
 
             <li>
                 Slow Computer Optimization —
-                <strong>$69</strong>
+                <strong>$59</strong>
             </li>
 
             <li>
                 Virus & Malware Removal —
-                <strong>$79</strong>
+                <strong>$69</strong>
             </li>
 
             <li>
                 Windows Repair —
-                <strong>$79</strong>
+                <strong>$69</strong>
             </li>
 
             <li>
                 Blue Screen / Boot Issues —
-                <strong>$89</strong>
+                <strong>$79</strong>
             </li>
 
             <li>
                 Windows Reinstallation —
-                <strong>$99</strong>
+                <strong>$89</strong>
             </li>
 
             <li>
                 Software Installation —
-                <strong>$29</strong>
+                <strong>$25</strong>
             </li>
 
         </ul>
 
 
         <p class="price-note">
-            Diagnostic fee is credited toward an approved repair.
+
+            Diagnostic fee is applied toward
+            an approved repair.
+
         </p>
 
     </div>
 
 
-    <!-- COMPUTER SETUP -->
+    <!-- =====================================================
+         COMPUTER SETUP
+    ====================================================== -->
 
     <div class="card">
 
@@ -862,50 +1243,55 @@
 
             <li>
                 New PC Setup —
-                <strong>$79</strong>
+                <strong>$69</strong>
             </li>
 
             <li>
                 Old → New PC Transfer —
-                <strong>$89</strong>
+                <strong>$79</strong>
             </li>
 
             <li>
                 Email Setup —
-                <strong>$29</strong>
+                <strong>$25</strong>
             </li>
 
             <li>
                 Microsoft Office Setup —
-                <strong>$29</strong>
+                <strong>$25</strong>
             </li>
 
             <li>
                 Printer Setup —
-                <strong>$39</strong>
+                <strong>$35</strong>
             </li>
 
             <li>
                 Home Wi-Fi Setup —
-                <strong>$69</strong>
+                <strong>$59</strong>
             </li>
 
         </ul>
 
 
         <p class="price-note">
-            Additional setup requirements may affect final pricing.
+
+            Additional work may be quoted
+            depending on complexity.
+
         </p>
 
     </div>
 
 
-    <!-- PERFORMANCE & UPGRADES -->
+    <!-- =====================================================
+         HARDWARE UPGRADES
+    ====================================================== -->
 
     <div class="card">
 
         <h3>
-            ⚡ Performance & Upgrades
+            ⚙️ Hardware Upgrades
         </h3>
 
 
@@ -913,51 +1299,55 @@
 
             <li>
                 RAM Installation —
-                <strong>$49 + Parts</strong>
+                <strong>$39 + Parts</strong>
             </li>
 
             <li>
                 SSD Installation —
-                <strong>$59 + Parts</strong>
+                <strong>$49 + Parts</strong>
             </li>
 
             <li>
                 GPU Installation —
-                <strong>$69 + Parts</strong>
-            </li>
-
-            <li>
-                Power Supply Installation —
-                <strong>$69 + Parts</strong>
-            </li>
-
-            <li>
-                Cooling / Fan Installation —
                 <strong>$59 + Parts</strong>
             </li>
 
             <li>
+                Power Supply Installation —
+                <strong>$59 + Parts</strong>
+            </li>
+
+            <li>
+                Cooling / Fan Installation —
+                <strong>$49 + Parts</strong>
+            </li>
+
+            <li>
                 CPU Installation —
-                <strong>$89 + Parts</strong>
+                <strong>$79 + Parts</strong>
             </li>
 
             <li>
                 General Hardware Installation —
-                <strong>$49 + Parts</strong>
+                <strong>$39 + Parts</strong>
             </li>
 
         </ul>
 
 
         <p class="price-note">
-            Parts are priced separately. Compatibility can be verified
-            before purchase.
+
+            Parts are separate.
+            Compatibility can be checked before purchase.
+
         </p>
 
     </div>
 
 
-    <!-- REMOTE SUPPORT -->
+    <!-- =====================================================
+         REMOTE SUPPORT
+    ====================================================== -->
 
     <div class="card">
 
@@ -975,47 +1365,52 @@
 
             <li>
                 Remote Support —
-                <strong>$59/hr</strong>
+                <strong>$49/hr</strong>
             </li>
 
             <li>
                 Remote Virus Removal —
-                <strong>$79</strong>
+                <strong>$69</strong>
             </li>
 
             <li>
                 Windows Troubleshooting —
-                <strong>$59</strong>
-            </li>
-
-            <li>
-                Software Installation —
-                <strong>$39</strong>
-            </li>
-
-            <li>
-                Printer Troubleshooting —
                 <strong>$49</strong>
             </li>
 
             <li>
+                Software Installation —
+                <strong>$29</strong>
+            </li>
+
+            <li>
+                Printer Troubleshooting —
+                <strong>$39</strong>
+            </li>
+
+            <li>
                 Remote Training —
-                <strong>$49/hr</strong>
+                <strong>$39/hr</strong>
             </li>
 
         </ul>
 
 
         <p class="price-note">
-            Remote services require a compatible internet connection.
+
+            Remote services require a compatible
+            internet connection.
+
         </p>
 
     </div>
 
 
-    <!-- CUSTOM GAMING PCS -->
+    <!-- =====================================================
+         CUSTOM GAMING PC BUILDS
+    ====================================================== -->
 
-    <div class="card pricing-highlight">
+    <div class="card">
 
         <span class="badge">
             CUSTOM BUILDS
@@ -1027,7 +1422,7 @@
 
 
         <div class="amount">
-            $149 – $349+
+            $149+
         </div>
 
 
@@ -1042,7 +1437,7 @@
             </li>
 
             <li>
-                ✔ Professional cable management
+                ✔ Cable management
             </li>
 
             <li>
@@ -1065,26 +1460,30 @@
 
 
         <p class="price-note">
-            Parts are separate. Final build price depends on system
-            complexity.
+
+            Parts are separate.
+            Final price depends on build complexity.
+
         </p>
 
     </div>
 
 
-    <!-- BUILD SERVICE TIERS -->
+    <!-- =====================================================
+         GAMING PC BUILD TIERS
+    ====================================================== -->
 
     <div class="card">
 
         <h3>
-            🎯 Build Service Tiers
+            🎯 Build Service
         </h3>
 
 
         <ul class="pricing-list">
 
             <li>
-                Basic Build —
+                Basic Assembly —
                 <strong>$149+</strong>
             </li>
 
@@ -1099,7 +1498,7 @@
             </li>
 
             <li>
-                Custom Consultation —
+                Custom Build Consultation —
                 <strong>FREE</strong>
             </li>
 
@@ -1107,7 +1506,10 @@
 
 
         <p class="price-note">
-            Every build is tested before it leaves Mountain Tech Solutions.
+
+            Every completed build is tested
+            before delivery.
+
         </p>
 
     </div>
@@ -1117,11 +1519,14 @@
 
 </section>
 
-<!-- ==========================
+<!-- =========================================================
      ABOUT
-========================== -->
+========================================================= -->
 
-<section id="about" class="reveal">
+<section
+    id="about"
+    class="reveal"
+>
 
 ```
 <h2>
@@ -1130,6 +1535,7 @@
 
 
 <div class="about-container">
+
 
     <img
         src="./images/Profile_Headshot.JPG"
@@ -1140,24 +1546,30 @@
     <div class="about-text">
 
         <p>
-            I am an experienced IT Technician with over 5 years of
-            hands-on experience in technical support, troubleshooting,
-            computer repair, and system administration.
+
+            I am an experienced IT Technician with over
+            5 years of hands-on experience in technical support,
+            troubleshooting, computer repair, and system administration.
+
         </p>
 
 
         <p>
-            I previously worked for the University of Florida in the
-            IT Help Desk department, supporting users with hardware,
-            software, and network-related issues.
+
+            I previously worked for the University of Florida
+            in the IT Help Desk department, supporting users with
+            hardware, software, and network-related issues.
+
         </p>
 
 
         <p>
+
             I hold a Bachelor's degree in Information Systems Technology
             and am CompTIA A+ and Network+ certified. I specialize in
-            PC repair, custom computer builds, hardware upgrades, and
-            optimizing systems for performance and reliability.
+            PC repair, custom computer builds, hardware upgrades,
+            and optimizing systems for performance and reliability.
+
         </p>
 
     </div>
@@ -1167,11 +1579,14 @@
 
 </section>
 
-<!-- ==========================
-     CONTACT / QUOTE
-========================== -->
+<!-- =========================================================
+     CONTACT
+========================================================= -->
 
-<section id="contact" class="reveal">
+<section
+    id="contact"
+    class="reveal"
+>
 
 ```
 <h2>
@@ -1185,7 +1600,9 @@
         $25 Diagnostic
     </strong>
 
-    Your diagnostic fee is credited toward an approved repair.
+    Bring your computer in for an affordable diagnostic
+    and we'll explain what needs to be done before
+    additional work begins.
 
 </div>
 
@@ -1194,6 +1611,7 @@
     action="https://formspree.io/f/xvzjjnzq"
     method="POST"
 >
+
 
     <input
         type="hidden"
@@ -1256,8 +1674,8 @@
             💻 Computer Setup
         </option>
 
-        <option value="upgrades">
-            ⚡ Performance & Upgrades
+        <option value="hardware">
+            ⚙️ Hardware Upgrades
         </option>
 
         <option value="remote">
@@ -1299,25 +1717,28 @@
         Request My Free Quote
     </button>
 
+
 </form>
 
 
 <p class="note">
 
-    Select all services that apply. Your information is sent securely.
+    Select all services that apply.
+    Your information is sent securely.
 
     <br>
 
-    We'll review your request and respond as soon as possible.
+    We'll review your request and respond
+    as soon as possible.
 
 </p>
 ```
 
 </section>
 
-<!-- ==========================
+<!-- =========================================================
      FOOTER
-========================== -->
+========================================================= -->
 
 <footer>
 
@@ -1327,16 +1748,16 @@
 
 </footer>
 
-<!-- ==========================
+<!-- =========================================================
      JAVASCRIPT
-========================== -->
+========================================================= -->
 
 <script>
 
 
-/* ==========================
+/* =========================================================
    SCROLL REVEAL
-========================== */
+========================================================= */
 
 const reveals =
     document.querySelectorAll(".reveal");
@@ -1350,7 +1771,10 @@ function revealOnScroll() {
             el.getBoundingClientRect().top;
 
 
-        if (top < window.innerHeight - 100) {
+        if (
+            top <
+            window.innerHeight - 100
+        ) {
 
             el.classList.add("visible");
 
@@ -1371,9 +1795,9 @@ revealOnScroll();
 
 
 
-/* ==========================
+/* =========================================================
    DYNAMIC SERVICE FORM
-========================== */
+========================================================= */
 
 function updateServices() {
 
@@ -1391,9 +1815,13 @@ function updateServices() {
     let services = [];
 
 
-    /* COMPUTER REPAIR */
+    /* =====================================================
+       COMPUTER REPAIR
+    ====================================================== */
 
-    if (category === "repair") {
+    if (
+        category === "repair"
+    ) {
 
         services = [
 
@@ -1403,78 +1831,90 @@ function updateServices() {
 
             "PC Tune-Up - $59",
 
-            "Slow Computer Optimization - $69",
+            "Slow Computer Optimization - $59",
 
-            "Virus & Malware Removal - $79",
+            "Virus & Malware Removal - $69",
 
-            "Windows Repair - $79",
+            "Windows Repair - $69",
 
-            "Blue Screen / Boot Issues - $89",
+            "Blue Screen / Boot Issues - $79",
 
-            "Windows Reinstallation - $99",
+            "Windows Reinstallation - $89",
 
-            "Software Installation - $29"
+            "Software Installation - $25"
 
         ];
 
     }
 
 
-    /* COMPUTER SETUP */
+    /* =====================================================
+       COMPUTER SETUP
+    ====================================================== */
 
-    else if (category === "setup") {
+    else if (
+        category === "setup"
+    ) {
 
         services = [
 
             "Not Sure - Let us recommend the right service",
 
-            "New PC Setup - $79",
+            "New PC Setup - $69",
 
-            "Old → New PC Transfer - $89",
+            "Old → New PC Transfer - $79",
 
-            "Email Setup - $29",
+            "Email Setup - $25",
 
-            "Microsoft Office Setup - $29",
+            "Microsoft Office Setup - $25",
 
-            "Printer Setup - $39",
+            "Printer Setup - $35",
 
-            "Home Wi-Fi Setup - $69"
+            "Home Wi-Fi Setup - $59"
 
         ];
 
     }
 
 
-    /* PERFORMANCE & UPGRADES */
+    /* =====================================================
+       HARDWARE UPGRADES
+    ====================================================== */
 
-    else if (category === "upgrades") {
+    else if (
+        category === "hardware"
+    ) {
 
         services = [
 
             "Not Sure - Let us determine what upgrade you need",
 
-            "RAM Installation - $49 + Parts",
+            "RAM Installation - $39 + Parts",
 
-            "SSD Installation - $59 + Parts",
+            "SSD Installation - $49 + Parts",
 
-            "GPU Installation - $69 + Parts",
+            "GPU Installation - $59 + Parts",
 
-            "Power Supply Installation - $69 + Parts",
+            "Power Supply Installation - $59 + Parts",
 
-            "Cooling / Fan Installation - $59 + Parts",
+            "Cooling / Fan Installation - $49 + Parts",
 
-            "CPU Installation - $89 + Parts",
+            "CPU Installation - $79 + Parts",
 
-            "General Hardware Installation - $49 + Parts"
+            "General Hardware Installation - $39 + Parts"
 
         ];
 
     }
 
 
-    /* REMOTE SUPPORT */
+    /* =====================================================
+       REMOTE SUPPORT
+    ====================================================== */
 
-    else if (category === "remote") {
+    else if (
+        category === "remote"
+    ) {
 
         services = [
 
@@ -1482,36 +1922,40 @@ function updateServices() {
 
             "Remote Diagnostic - $25",
 
-            "Remote Support - $59/hr",
+            "Remote Support - $49/hr",
 
-            "Remote Virus Removal - $79",
+            "Remote Virus Removal - $69",
 
-            "Windows Troubleshooting - $59",
+            "Windows Troubleshooting - $49",
 
-            "Software Installation - $39",
+            "Software Installation - $29",
 
-            "Printer Troubleshooting - $49",
+            "Printer Troubleshooting - $39",
 
-            "Remote Training - $49/hr"
+            "Remote Training - $39/hr"
 
         ];
 
     }
 
 
-    /* CUSTOM GAMING PC */
+    /* =====================================================
+       CUSTOM GAMING PC
+    ====================================================== */
 
-    else if (category === "gaming") {
+    else if (
+        category === "gaming"
+    ) {
 
         services = [
 
             "Not Sure - I need help choosing a build",
 
-            "Custom Gaming PC Consultation - FREE",
+            "Custom Build Consultation - FREE",
 
-            "Basic Build Service - $149+",
+            "Basic Assembly - $149+",
 
-            "Performance Build Service - $199+",
+            "Performance Build - $199+",
 
             "Premium / Complex Build - $249+",
 
@@ -1530,47 +1974,55 @@ function updateServices() {
     }
 
 
-    /* CREATE CHECKBOXES */
+    /* =====================================================
+       CREATE CHECKBOXES
+    ====================================================== */
 
-    services.forEach(function(service) {
+    services.forEach(
+        function(service) {
 
-        const label =
-            document.createElement("label");
-
-
-        const checkbox =
-            document.createElement("input");
-
-
-        checkbox.type =
-            "checkbox";
+            const label =
+                document.createElement(
+                    "label"
+                );
 
 
-        checkbox.name =
-            "services[]";
+            const checkbox =
+                document.createElement(
+                    "input"
+                );
 
 
-        checkbox.value =
-            service;
+            checkbox.type =
+                "checkbox";
 
 
-        label.appendChild(
-            checkbox
-        );
+            checkbox.name =
+                "services[]";
 
 
-        label.appendChild(
-            document.createTextNode(
-                " " + service
-            )
-        );
+            checkbox.value =
+                service;
 
 
-        serviceBox.appendChild(
-            label
-        );
+            label.appendChild(
+                checkbox
+            );
 
-    });
+
+            label.appendChild(
+                document.createTextNode(
+                    " " + service
+                )
+            );
+
+
+            serviceBox.appendChild(
+                label
+            );
+
+        }
+    );
 
 }
 
@@ -1581,15 +2033,6 @@ function updateServices() {
 </html>
 ```
 
-Now the pricing section has the effect I think you were looking for:
+**One pricing decision I especially like here:** $39 for RAM. A current Georgia-area shop advertises RAM upgrades at $50+ parts, while another independent shop lists basic hardware installation at $39.95. So $39 puts you in a genuinely competitive position without making the service look suspiciously cheap.
 
-* **Every pricing box has a blue neon border**
-* Every card has a **subtle blue glow**
-* Hovering makes the border shift brighter toward **cyan**
-* Hovering also increases the neon glow
-* The cards remain visually consistent
-* **MOST POPULAR** and **CUSTOM BUILDS** still have their badges
-* The form's service categories and prices match the pricing cards
-* The `$25 diagnostic` messaging remains consistent
-
-One important thing: if you're still seeing only two blue borders after replacing this entire file, do a **hard refresh with `Ctrl + Shift + R`**. If it still happens after that, then you're almost certainly loading a different CSS file or a cached/duplicate version of the page.
+I also deliberately **didn't slash everything to $20–$30**. Once you get your first customers, you don't want to discover that you're spending an hour on a repair and barely covering your time. Your competitive advantage should be **"professional technician + fair local pricing,"** not **"cheapest guy in town."**
