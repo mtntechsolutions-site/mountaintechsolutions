@@ -1,15 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Mountain Tech Solutions | PC Repair, Virus Removal & Custom Builds</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mountain Tech Solutions provides professional PC repair, virus removal, custom gaming PC builds, upgrades, and computer services in North Georgia. Fast, reliable, and affordable.">
+<meta name="description" content="Mountain Tech Solutions provides professional PC repair, virus removal, custom gaming PC builds, upgrades, and computer services in North Georgia. Professional service at startup-friendly prices.">
 
 <style>
 /* ==========================
    RESET & BASE
 ========================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +32,7 @@ body {
 /* ==========================
    HEADER
 ========================== */
+
 header {
     padding: 90px 20px 70px;
     text-align: center;
@@ -50,15 +53,18 @@ header p {
     font-size: 1.05rem;
     color: #94a3b8;
 }
+
 .logo {
     width: 105px !important;
     height: auto !important;
     display: block;
     margin: 0 auto 15px auto;
 }
+
 /* ==========================
    NAV
 ========================== */
+
 nav {
     position: sticky;
     top: 0;
@@ -85,6 +91,7 @@ nav a:hover {
 /* ==========================
    HERO
 ========================== */
+
 .hero {
     padding: 120px 20px 90px;
     text-align: center;
@@ -123,6 +130,7 @@ nav a:hover {
 /* ==========================
    TRUST BADGES
 ========================== */
+
 .trust {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -147,6 +155,7 @@ nav a:hover {
 /* ==========================
    SECTIONS
 ========================== */
+
 section {
     max-width: 1200px;
     margin: auto;
@@ -162,6 +171,7 @@ section h2 {
 /* ==========================
    CARDS
 ========================== */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -193,9 +203,62 @@ section h2 {
 .card p {
     color: #9ca3af;
 }
+
+/* ==========================
+   PRICING
+========================== */
+
+.amount {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-top: 14px;
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pricing-list {
+    margin-top: 22px;
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.pricing-list li {
+    margin: 10px 0;
+}
+
+.pricing-list strong {
+    color: #e5e7eb;
+}
+
+.price-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.pricing-highlight {
+    border-color: #2563eb;
+    box-shadow: 0 0 30px rgba(37,99,235,0.12);
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    background: rgba(37,99,235,0.15);
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 /* ==========================
    GALLERY
 ========================== */
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -223,32 +286,9 @@ section h2 {
 }
 
 /* ==========================
-   Services + Pricing
+   ABOUT
 ========================== */
-.amount {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-top: 14px;
-    background: linear-gradient(135deg, #2563eb, #38bdf8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
-.pricing-list {
-    margin-top: 22px;
-    list-style: none;
-    padding: 0;
-    font-size: 14px;
-    color: #9ca3af;
-}
-
-.pricing-list li {
-    margin: 8px 0;
-}
-
-/* ==========================
-   ABOUT WITH PHOTO
-========================== */
 .about-container {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -268,22 +308,18 @@ section h2 {
     margin-bottom: 18px;
 }
 
-@media (max-width: 768px) {
-    .about-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-}
-
 /* ==========================
    CONTACT
 ========================== */
+
 form {
     max-width: 520px;
     margin: auto;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     width: 100%;
     padding: 15px;
     margin-top: 16px;
@@ -291,6 +327,18 @@ input, textarea, select {
     border: 1px solid #1e293b;
     border-radius: 8px;
     color: #e5e7eb;
+}
+
+select {
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 18px;
+    color: #cbd5e1;
+    font-size: 14px;
+    text-align: left;
 }
 
 .service-checkboxes {
@@ -309,15 +357,25 @@ input, textarea, select {
     color: #e5e7eb;
 }
 
+.service-checkboxes label:hover {
+    border-color: #2563eb;
+}
+
 .service-checkboxes input {
     width: auto;
     margin-right: 10px;
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
     outline: none;
     border-color: #38bdf8;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 button {
@@ -330,10 +388,16 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(56,189,248,0.25);
 }
 
 .note {
-    margin-top: 14px;
+    margin-top: 18px;
     text-align: center;
     font-size: 14px;
     color: #6b7280;
@@ -342,6 +406,7 @@ button {
 /* ==========================
    FOOTER
 ========================== */
+
 footer {
     padding: 40px;
     text-align: center;
@@ -353,6 +418,7 @@ footer {
 /* ==========================
    ANIMATIONS
 ========================== */
+
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -364,279 +430,496 @@ footer {
     transform: translateY(0);
 }
 
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero {
+        padding: 80px 20px 70px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 45px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-container img {
+        max-width: 260px;
+        margin: auto;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-   <img src="./images/logo.png" alt="Mountain Tech Solutions Logo" class="logo">
+    <img src="./images/logo.png" alt="Mountain Tech Solutions Logo" class="logo">
+
     <h1>Mountain Tech Solutions</h1>
-    <p>Professional Virus Removal • Custom Gaming PCs • Computer Repairs & Upgrades</p>
+
+    <p>
+        Professional Virus Removal • Custom Gaming PCs • Computer Repairs & Upgrades
+    </p>
 </header>
 
 <nav>
     <a href="#gallery">Gallery</a>
-    <a href="#pricing">Services and Pricing</a>
+    <a href="#pricing">Services & Pricing</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero reveal">
 
-    <h2>Reliable Tech |  Smart Solutions |  Peak Performance</h2>
+    <h2>Reliable Tech | Smart Solutions | Peak Performance</h2>
 
     <p>
-        High-quality PC repair, malware removal, computer optimization,
-        and custom gaming systems built for performance and reliability.
+        Professional PC repair, malware removal, computer optimization,
+        hardware upgrades, and custom gaming systems built for performance
+        and reliability — without the big-box repair shop price.
     </p>
 
     <a href="#contact" class="btn">Get a Free Quote</a>
 
     <div class="trust">
+
         <div>
-            <h4>✔ Trusted Service</h4>
-            <p>Professional-grade tools & methods</p>
+            <h4>✔ Professional Service</h4>
+            <p>Experienced technician with professional IT experience</p>
         </div>
 
         <div>
-            <h4>⚡ Fast Turnaround</h4>
-            <p>Quick, efficient service</p>
+            <h4>⚡ Startup-Friendly Pricing</h4>
+            <p>Quality technical service at competitive local prices</p>
         </div>
 
         <div>
             <h4>🔒 Secure Handling</h4>
-            <p>Your data stays protected</p>
+            <p>Your computer and personal data are treated with care</p>
         </div>
+
     </div>
 
 </section>
 
-
 <section id="gallery" class="reveal">
 
-<h2>Recent Builds</h2>
+    <h2>Recent Builds</h2>
 
-<div class="gallery-grid">
+    <div class="gallery-grid">
 
-<div class="gallery-item">
-<img src="./images/BF360.PNG" alt="Custom Gaming PC Build">
-</div>
+        <div class="gallery-item">
+            <img src="./images/BF360.PNG" alt="Custom Gaming PC Build">
+        </div>
 
-<div class="gallery-item">
-<img src="./images/Musetex.PNG" alt="RGB Gaming PC Build">
-</div>
+        <div class="gallery-item">
+            <img src="./images/Musetex.PNG" alt="RGB Gaming PC Build">
+        </div>
 
-</div>
+    </div>
 
 </section>
 
-
 <section id="pricing" class="reveal">
 
-<h2>Services + Pricing</h2>
+    <h2>Services & Pricing</h2>
 
-<div class="grid">
+    <div class="grid">
 
-<div class="card">
-<h3>🛠️ Computer Services</h3>
+        <!-- COMPUTER REPAIR -->
 
-<ul class="pricing-list">
-<li>Computer Diagnostic — <strong>$39</strong></li>
-<li>PC Tune-Up — <strong>$69</strong></li>
-<li>Virus & Malware Removal — <strong>$79</strong></li>
-<li>Windows Repair — <strong>$89</strong></li>
-<li>Windows Reinstallation — <strong>$129</strong></li>
-<li>Slow Computer Optimization — <strong>$69</strong></li>
-<li>Blue Screen / Boot Issues — <strong>$89</strong></li>
-<li>Software Installation — <strong>$29+</strong></li>
-</ul>
+        <div class="card pricing-highlight">
 
-</div>
+            <span class="badge">MOST POPULAR</span>
 
+            <h3>🔧 Computer Repair</h3>
 
-<div class="card">
-<h3>🖥️ New Computer Services</h3>
+            <ul class="pricing-list">
 
-<ul class="pricing-list">
-<li>New PC Setup — <strong>$99</strong></li>
-<li>File Transfer (Old → New PC) — <strong>$99</strong></li>
-<li>Email Setup — <strong>$39</strong></li>
-<li>Microsoft Office Setup — <strong>$39</strong></li>
-<li>Printer Setup — <strong>$49</strong></li>
-<li>Home Wi-Fi Setup — <strong>$79</strong></li>
-</ul>
+                <li>Computer Diagnostic — <strong>$25</strong></li>
 
-</div>
+                <li>PC Tune-Up — <strong>$59</strong></li>
 
+                <li>Slow Computer Optimization — <strong>$69</strong></li>
 
-<div class="card">
-<h3>🌐 Remote Support</h3>
+                <li>Virus & Malware Removal — <strong>$79</strong></li>
 
-<ul class="pricing-list">
-<li>Remote Diagnostic — <strong>$29</strong></li>
-<li>Remote Support Session (Up to 1 Hour) — <strong>$59</strong></li>
-<li>Virus Removal — <strong>$79</strong></li>
-<li>Software Installation — <strong>$39</strong></li>
-<li>Printer Troubleshooting — <strong>$49</strong></li>
-<li>Email Support & Setup — <strong>$39</strong></li>
-<li>Windows Errors & Fixes — <strong>$59</strong></li>
-<li>Performance Issues — <strong>$69</strong></li>
-<li>General Tech Support — <strong>$59/hr</strong></li>
-<li>Remote Training — <strong>$49/hr</strong></li>
-</ul>
+                <li>Windows Repair — <strong>$79</strong></li>
 
-</div>
+                <li>Blue Screen / Boot Issues — <strong>$89</strong></li>
+
+                <li>Windows Reinstallation — <strong>$99</strong></li>
+
+                <li>Software Installation — <strong>$29</strong></li>
+
+            </ul>
+
+            <p class="price-note">
+                Diagnostic fee is credited toward an approved repair.
+            </p>
+
+        </div>
 
 
-<div class="card">
-<h3>⚙️ Hardware Upgrades</h3>
+        <!-- COMPUTER SETUP -->
 
-<ul class="pricing-list">
-<li>SSD Upgrade — <strong>$89 + Parts</strong></li>
-<li>RAM Upgrade — <strong>$59 + Parts</strong></li>
-<li>Graphics Card Install — <strong>$99 + Parts</strong></li>
-<li>CPU Upgrade — <strong>$129 + Parts</strong></li>
-<li>Power Supply Install — <strong>$79 + Parts</strong></li>
-<li>Cooling Upgrade — <strong>$69 + Parts</strong></li>
-<li>General Hardware Installation — <strong>$59+</strong></li>
-</ul>
+        <div class="card">
 
-</div>
+            <h3>💻 Computer Setup</h3>
+
+            <ul class="pricing-list">
+
+                <li>New PC Setup — <strong>$79</strong></li>
+
+                <li>Old → New PC Transfer — <strong>$89</strong></li>
+
+                <li>Email Setup — <strong>$29</strong></li>
+
+                <li>Microsoft Office Setup — <strong>$29</strong></li>
+
+                <li>Printer Setup — <strong>$39</strong></li>
+
+                <li>Home Wi-Fi Setup — <strong>$69</strong></li>
+
+            </ul>
+
+            <p class="price-note">
+                Additional setup requirements may affect final pricing.
+            </p>
+
+        </div>
 
 
-<div class="card">
-<h3>🎮 Custom Gaming PC Builds</h3>
+        <!-- PERFORMANCE & UPGRADES -->
 
-<div class="amount">$199 – $299+</div>
+        <div class="card">
 
-<ul class="pricing-list">
-<li>✔ Parts consultation</li>
-<li>✔ Full assembly</li>
-<li>✔ Cable management</li>
-<li>✔ BIOS configuration</li>
-<li>✔ Stress testing</li>
-<li>✔ Performance optimization</li>
-</ul>
+            <h3>⚡ Performance & Upgrades</h3>
 
-</div>
+            <ul class="pricing-list">
 
-</div>
+                <li>RAM Installation — <strong>$49 + Parts</strong></li>
+
+                <li>SSD Installation — <strong>$59 + Parts</strong></li>
+
+                <li>GPU Installation — <strong>$69 + Parts</strong></li>
+
+                <li>Power Supply Installation — <strong>$69 + Parts</strong></li>
+
+                <li>Cooling / Fan Installation — <strong>$59 + Parts</strong></li>
+
+                <li>CPU Installation — <strong>$89 + Parts</strong></li>
+
+                <li>General Hardware Installation — <strong>$49 + Parts</strong></li>
+
+            </ul>
+
+            <p class="price-note">
+                Parts are priced separately. Compatibility can be verified before purchase.
+            </p>
+
+        </div>
+
+
+        <!-- REMOTE SUPPORT -->
+
+        <div class="card">
+
+            <h3>🌐 Remote Support</h3>
+
+            <ul class="pricing-list">
+
+                <li>Remote Diagnostic — <strong>$25</strong></li>
+
+                <li>Remote Support — <strong>$59/hr</strong></li>
+
+                <li>Remote Virus Removal — <strong>$79</strong></li>
+
+                <li>Windows Troubleshooting — <strong>$59</strong></li>
+
+                <li>Software Installation — <strong>$39</strong></li>
+
+                <li>Printer Troubleshooting — <strong>$49</strong></li>
+
+                <li>Remote Training — <strong>$49/hr</strong></li>
+
+            </ul>
+
+            <p class="price-note">
+                Remote services require a compatible internet connection.
+            </p>
+
+        </div>
+
+
+        <!-- CUSTOM GAMING PCS -->
+
+        <div class="card pricing-highlight">
+
+            <span class="badge">CUSTOM BUILDS</span>
+
+            <h3>🎮 Custom Gaming PCs</h3>
+
+            <div class="amount">$149 – $349+</div>
+
+            <ul class="pricing-list">
+
+                <li>✔ Parts consultation</li>
+
+                <li>✔ Full system assembly</li>
+
+                <li>✔ Professional cable management</li>
+
+                <li>✔ BIOS configuration</li>
+
+                <li>✔ Driver installation</li>
+
+                <li>✔ Stress testing</li>
+
+                <li>✔ Performance optimization</li>
+
+            </ul>
+
+            <p class="price-note">
+                Parts are separate. Final build price depends on system complexity.
+            </p>
+
+        </div>
+
+
+        <!-- GAMING BUILD TIERS -->
+
+        <div class="card">
+
+            <h3>🎯 Build Service Tiers</h3>
+
+            <ul class="pricing-list">
+
+                <li>
+                    Basic Build — <strong>$149+</strong>
+                </li>
+
+                <li>
+                    Performance Build — <strong>$199+</strong>
+                </li>
+
+                <li>
+                    Premium / Complex Build — <strong>$249+</strong>
+                </li>
+
+                <li>
+                    Custom Consultation — <strong>Free</strong>
+                </li>
+
+            </ul>
+
+            <p class="price-note">
+                Every build is tested before it leaves Mountain Tech Solutions.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
 <section id="about" class="reveal">
 
-<h2>About Me</h2>
+    <h2>About Me</h2>
 
-<div class="about-container">
+    <div class="about-container">
 
-<img src="./images/Profile_Headshot.JPG" alt="IT Technician portrait">
+        <img
+            src="./images/Profile_Headshot.JPG"
+            alt="IT Technician portrait"
+        >
 
-<div class="about-text">
+        <div class="about-text">
 
-<p>
-I am an experienced IT Technician with over 5 years of hands-on experience in technical support,
-troubleshooting, computer repair, and system administration.
-</p>
+            <p>
+                I am an experienced IT Technician with over 5 years of
+                hands-on experience in technical support, troubleshooting,
+                computer repair, and system administration.
+            </p>
 
-<p>
-I previously worked for the University of Florida in the IT Help Desk department,
-supporting users with hardware, software, and network-related issues.
-</p>
+            <p>
+                I previously worked for the University of Florida in the
+                IT Help Desk department, supporting users with hardware,
+                software, and network-related issues.
+            </p>
 
-<p>
-I hold a Bachelor’s degree in Information Systems Technology and am CompTIA A+ and Network+ certified.
-I specialize in PC repair, custom computer builds, hardware upgrades, and optimizing systems for performance and reliability.
-</p>
+            <p>
+                I hold a Bachelor's degree in Information Systems Technology
+                and am CompTIA A+ and Network+ certified. I specialize in
+                PC repair, custom computer builds, hardware upgrades, and
+                optimizing systems for performance and reliability.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
 <section id="contact" class="reveal">
 
-<h2>Contact</h2>
+    <h2>Get a Free Quote</h2>
 
-<form action="https://formspree.io/f/xvzjjnzq" method="POST">
+    <form
+        action="https://formspree.io/f/xvzjjnzq"
+        method="POST"
+    >
 
-<input type="hidden" name="_subject" value="New Mountain Tech Solutions Quote Request">
+        <input
+            type="hidden"
+            name="_subject"
+            value="New Mountain Tech Solutions Quote Request"
+        >
 
-<input type="text" name="_gotcha" style="display:none">
+        <input
+            type="text"
+            name="_gotcha"
+            style="display:none"
+        >
 
-<input type="text" name="name" placeholder="Your Name" required>
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
 
-<input type="email" name="email" placeholder="Your Email" required>
+        <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
 
-<input type="tel" name="phone" placeholder="Phone Number">
+        <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+        >
+
+        <label for="category">
+            Service Category
+        </label>
+
+        <select
+            id="category"
+            name="category"
+            required
+            onchange="updateServices()"
+        >
+
+            <option value="">
+                Select a Category
+            </option>
+
+            <option value="repair">
+                🔧 Computer Repair
+            </option>
+
+            <option value="setup">
+                💻 Computer Setup
+            </option>
+
+            <option value="upgrades">
+                ⚡ Performance & Upgrades
+            </option>
+
+            <option value="remote">
+                🌐 Remote Support
+            </option>
+
+            <option value="gaming">
+                🎮 Custom Gaming PC
+            </option>
+
+        </select>
 
 
-<label for="category">Service Category</label>
+        <label>
+            Select Service(s)
+        </label>
 
-<select id="category" name="category" required onchange="updateServices()">
+        <div
+            id="services"
+            class="service-checkboxes"
+        >
 
-<option value="">Select a Category</option>
+            <p>
+                Select a category first.
+            </p>
 
-<option value="computer">🛠️ Computer Services</option>
-
-<option value="newcomputer">🖥️ New Computer Services</option>
-
-<option value="remote">🌐 Remote Support</option>
-
-<option value="gaming">🎮 Custom Gaming PC Builds</option>
-
-<option value="hardware">⚙️ Hardware Upgrades</option>
-
-</select>
+        </div>
 
 
-<label>Select Service(s)</label>
-
-<div id="services" class="service-checkboxes">
-    <p>Select a category first.</p>
-</div>
-
-
-<textarea 
-name="message" 
-placeholder="Tell us about your computer issue or project"
-required></textarea>
+        <textarea
+            name="message"
+            placeholder="Tell us about your computer issue or project"
+            required
+        ></textarea>
 
 
-<button type="submit">Send Message</button>
+        <button type="submit">
+            Request My Free Quote
+        </button>
 
-</form>
+    </form>
 
 
-<p class="note">
-<p class="note">
-Select all services that apply. Your information is sent securely.
-<br>
-We will respond as soon as possible.
-</p>
-<br>
-Your information is sent securely. We will respond as soon as possible.
-</p>
-
+    <p class="note">
+        Select all services that apply. Your information is sent securely.
+        <br>
+        We'll review your request and respond as soon as possible.
+    </p>
 
 </section>
 
 
 <footer>
 
-© 2026 Mountain Tech Solutions
+    © 2026 Mountain Tech Solutions
 
 </footer>
 
 
 <script>
 
-const reveals = document.querySelectorAll(".reveal");
+/* ==========================
+   SCROLL REVEAL
+========================== */
 
+const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
 
@@ -645,117 +928,195 @@ function revealOnScroll() {
         const top = el.getBoundingClientRect().top;
 
         if (top < window.innerHeight - 100) {
-
             el.classList.add("visible");
-
         }
 
     });
 
 }
 
-
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
 
 
+/* ==========================
+   DYNAMIC SERVICE SELECTION
+========================== */
 
 function updateServices() {
 
-    const category = document.getElementById("category").value;
+    const category =
+        document.getElementById("category").value;
 
-    const serviceBox = document.getElementById("services");
+    const serviceBox =
+        document.getElementById("services");
 
     serviceBox.innerHTML = "";
-
 
     let services = [];
 
 
-    if (category === "computer") {
+    /* ==========================
+       COMPUTER REPAIR
+    ========================== */
+
+    if (category === "repair") {
 
         services = [
+
             "Not Sure - Let us diagnose the issue",
-            "Computer Diagnostic - $39",
-            "PC Tune-Up - $69",
-            "Virus & Malware Removal - $79",
-            "Windows Repair - $89",
-            "Windows Reinstallation - $129",
+
+            "Computer Diagnostic - $25",
+
+            "PC Tune-Up - $59",
+
             "Slow Computer Optimization - $69",
+
+            "Virus & Malware Removal - $79",
+
+            "Windows Repair - $79",
+
             "Blue Screen / Boot Issues - $89",
-            "Software Installation - $29+"
+
+            "Windows Reinstallation - $99",
+
+            "Software Installation - $29"
+
         ];
 
-    } 
+    }
 
-    else if (category === "newcomputer") {
+
+    /* ==========================
+       COMPUTER SETUP
+    ========================== */
+
+    else if (category === "setup") {
 
         services = [
-            "Not Sure - Let us diagnose the issue",
-            "New PC Setup - $99",
-            "File Transfer (Old → New PC) - $99",
-            "Email Setup - $39",
-            "Microsoft Office Setup - $39",
-            "Printer Setup - $49",
-            "Home Wi-Fi Setup - $79"
+
+            "Not Sure - Let us recommend the right service",
+
+            "New PC Setup - $79",
+
+            "Old → New PC Transfer - $89",
+
+            "Email Setup - $29",
+
+            "Microsoft Office Setup - $29",
+
+            "Printer Setup - $39",
+
+            "Home Wi-Fi Setup - $69"
+
         ];
 
-    } 
+    }
+
+
+    /* ==========================
+       PERFORMANCE & UPGRADES
+    ========================== */
+
+    else if (category === "upgrades") {
+
+        services = [
+
+            "Not Sure - Let us determine what upgrade you need",
+
+            "RAM Installation - $49 + Parts",
+
+            "SSD Installation - $59 + Parts",
+
+            "GPU Installation - $69 + Parts",
+
+            "Power Supply Installation - $69 + Parts",
+
+            "Cooling / Fan Installation - $59 + Parts",
+
+            "CPU Installation - $89 + Parts",
+
+            "General Hardware Installation - $49 + Parts"
+
+        ];
+
+    }
+
+
+    /* ==========================
+       REMOTE SUPPORT
+    ========================== */
 
     else if (category === "remote") {
 
         services = [
+
             "Not Sure - Let us diagnose the issue",
-            "Remote Diagnostic - $29",
-            "Remote Support Session (Up to 1 Hour) - $59",
-            "Virus Removal - $79",
+
+            "Remote Diagnostic - $25",
+
+            "Remote Support - $59/hr",
+
+            "Remote Virus Removal - $79",
+
+            "Windows Troubleshooting - $59",
+
             "Software Installation - $39",
+
             "Printer Troubleshooting - $49",
-            "Email Support & Setup - $39",
-            "Windows Errors & Fixes - $59",
-            "Performance Issues - $69",
-            "General Tech Support - $59/hr",
+
             "Remote Training - $49/hr"
+
         ];
 
     }
+
+
+    /* ==========================
+       CUSTOM GAMING PC
+    ========================== */
 
     else if (category === "gaming") {
 
         services = [
-            "Not Sure - Let us diagnose the issue",
-            "Custom Gaming PC Consultation",
-            "Gaming PC Build Service - $199+",
+
+            "Not Sure - I need help choosing a build",
+
+            "Custom Gaming PC Consultation - FREE",
+
+            "Basic Build Service - $149+",
+
+            "Performance Build Service - $199+",
+
+            "Premium / Complex Build - $249+",
+
             "BIOS Configuration",
+
             "Cable Management",
-            "Performance Optimization",
-            "Stress Testing"
+
+            "Driver Installation",
+
+            "Stress Testing",
+
+            "Performance Optimization"
+
         ];
 
     }
 
-    else if (category === "hardware") {
 
-        services = [
-            "Not Sure - Let us diagnose the issue",
-            "SSD Upgrade - $89 + Parts",
-            "RAM Upgrade - $59 + Parts",
-            "Graphics Card Install - $99 + Parts",
-            "CPU Upgrade - $129 + Parts",
-            "Power Supply Install - $79 + Parts",
-            "Cooling Upgrade - $69 + Parts",
-            "General Hardware Installation - $59+"
-        ];
-
-    }
-
+    /* ==========================
+       CREATE CHECKBOXES
+    ========================== */
 
     services.forEach(function(service) {
 
-        let label = document.createElement("label");
+        const label =
+            document.createElement("label");
 
-        let checkbox = document.createElement("input");
+        const checkbox =
+            document.createElement("input");
 
         checkbox.type = "checkbox";
 
@@ -763,11 +1124,11 @@ function updateServices() {
 
         checkbox.value = service;
 
-
         label.appendChild(checkbox);
 
-        label.appendChild(document.createTextNode(" " + service));
-
+        label.appendChild(
+            document.createTextNode(" " + service)
+        );
 
         serviceBox.appendChild(label);
 
@@ -777,6 +1138,6 @@ function updateServices() {
 
 </script>
 
-
 </body>
 </html>
+```
