@@ -1,502 +1,574 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Mountain Tech Solutions | PC Repair, Virus Removal & Custom Builds</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mountain Tech Solutions provides professional PC repair, virus removal, custom gaming PC builds, upgrades, and computer services in North Georgia. Professional service at startup-friendly prices.">
-
-<style>
-/* ==========================
-   RESET & BASE
-========================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: radial-gradient(circle at top, #0f172a, #020617);
-    color: #e5e7eb;
-    line-height: 1.7;
-}
-
-/* ==========================
-   HEADER
-========================== */
-
-header {
-    padding: 90px 20px 70px;
-    text-align: center;
-    border-bottom: 1px solid #1e293b;
-    background:
-        linear-gradient(180deg, rgba(37,99,235,0.18), transparent),
-        #020617;
-}
-
-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-header p {
-    margin-top: 14px;
-    font-size: 1.05rem;
-    color: #94a3b8;
-}
-
-.logo {
-    width: 105px !important;
-    height: auto !important;
-    display: block;
-    margin: 0 auto 15px auto;
-}
-
-/* ==========================
-   NAV
-========================== */
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(2,6,23,0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid #1e293b;
-    text-align: center;
-    padding: 14px;
-}
-
-nav a {
-    color: #cbd5f5;
-    margin: 0 18px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #38bdf8;
-}
-
-/* ==========================
-   HERO
-========================== */
-
-.hero {
-    padding: 120px 20px 90px;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2.7rem;
-    font-weight: 700;
-    color: #38bdf8;
-}
-
-.hero p {
-    max-width: 760px;
-    margin: 18px auto 0;
-    color: #9ca3af;
-    font-size: 1.1rem;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 16px 46px;
-    background: linear-gradient(135deg, #2563eb, #38bdf8);
-    color: #020617;
-    font-weight: 600;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 45px rgba(56,189,248,0.4);
-}
-
-/* ==========================
-   TRUST BADGES
-========================== */
-
-.trust {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 40px auto 0;
-    text-align: center;
-}
-
-.trust div {
-    padding: 26px;
-    border: 1px solid #1e293b;
-    border-radius: 14px;
-    background: #020617;
-}
-
-.trust h4 {
-    color: #38bdf8;
-    margin-bottom: 10px;
-}
-
-/* ==========================
-   SECTIONS
-========================== */
-
-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 100px 20px;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 2.3rem;
-    margin-bottom: 70px;
-}
-
-/* ==========================
-   CARDS
-========================== */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 36px;
-}
-
-.card {
-    background: #020617;
-    border: 1px solid #1e293b;
-    border-radius: 16px;
-    padding: 42px 32px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 35px 70px rgba(0,0,0,0.6);
-}
-
-.card h3 {
-    color: #38bdf8;
-    margin-bottom: 16px;
-    font-size: 1.3rem;
-}
-
-.card p {
-    color: #9ca3af;
-}
-
-/* ==========================
-   PRICING
-========================== */
-
-.amount {
-    font-size: 2.1rem;
-    font-weight: 700;
-    margin-top: 14px;
-    background: linear-gradient(135deg, #2563eb, #38bdf8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.pricing-list {
-    margin-top: 22px;
-    list-style: none;
-    padding: 0;
-    font-size: 14px;
-    color: #9ca3af;
-}
-
-.pricing-list li {
-    margin: 10px 0;
-}
-
-.pricing-list strong {
-    color: #e5e7eb;
-}
-
-.price-note {
-    margin-top: 20px;
-    font-size: 13px;
-    color: #64748b;
-}
-
-.pricing-highlight {
-    border-color: #2563eb;
-    box-shadow: 0 0 30px rgba(37,99,235,0.12);
-}
-
-.badge {
-    display: inline-block;
-    padding: 5px 12px;
-    margin-bottom: 14px;
-    border-radius: 20px;
-    background: rgba(37,99,235,0.15);
-    color: #38bdf8;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-/* ==========================
-   GALLERY
-========================== */
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-}
-
-.gallery-item {
-    background: #020617;
-    border: 1px solid #1e293b;
-    border-radius: 18px;
-    overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.gallery-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-}
-
-/* ==========================
-   ABOUT
-========================== */
-
-.about-container {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.about-container img {
-    width: 100%;
-    border-radius: 16px;
-    border: 1px solid #1e293b;
-}
-
-.about-text p {
-    color: #9ca3af;
-    font-size: 1.1rem;
-    margin-bottom: 18px;
-}
-
-/* ==========================
-   CONTACT
-========================== */
-
-form {
-    max-width: 520px;
-    margin: auto;
-}
-
-input,
-textarea,
-select {
-    width: 100%;
-    padding: 15px;
-    margin-top: 16px;
-    background: #020617;
-    border: 1px solid #1e293b;
-    border-radius: 8px;
-    color: #e5e7eb;
-}
-
-select {
-    cursor: pointer;
-}
-
-form label {
-    display: block;
-    margin-top: 18px;
-    color: #cbd5e1;
-    font-size: 14px;
-    text-align: left;
-}
-
-.service-checkboxes {
-    margin-top: 16px;
-    text-align: left;
-}
-
-.service-checkboxes label {
-    display: block;
-    background: #020617;
-    border: 1px solid #1e293b;
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    color: #e5e7eb;
-}
-
-.service-checkboxes label:hover {
-    border-color: #2563eb;
-}
-
-.service-checkboxes input {
-    width: auto;
-    margin-right: 10px;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    border-color: #38bdf8;
-}
-
-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-button {
-    margin-top: 24px;
-    width: 100%;
-    padding: 16px;
-    background: linear-gradient(135deg, #2563eb, #38bdf8);
-    color: #020617;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(56,189,248,0.25);
-}
-
-.note {
-    margin-top: 18px;
-    text-align: center;
-    font-size: 14px;
-    color: #6b7280;
-}
-
-/* ==========================
-   FOOTER
-========================== */
-
-footer {
-    padding: 40px;
-    text-align: center;
-    border-top: 1px solid #1e293b;
-    background: #020617;
-    color: #9ca3af;
-}
-
-/* ==========================
-   ANIMATIONS
-========================== */
-
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.7s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 2.3rem;
-    }
-
-    .hero {
-        padding: 80px 20px 70px;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    nav a {
-        margin: 0 7px;
-        font-size: 13px;
-    }
-
-    section {
-        padding: 70px 20px;
-    }
-
-    section h2 {
-        font-size: 2rem;
-        margin-bottom: 45px;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .about-container img {
-        max-width: 260px;
-        margin: auto;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+
+    <title>
+        Mountain Tech Solutions | PC Repair, Virus Removal & Custom Builds
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Mountain Tech Solutions provides professional PC repair, virus removal, custom gaming PC builds, upgrades, and computer services in North Georgia. Professional service at startup-friendly prices."
+    >
+
+    <style>
+
+        /* ==========================
+           RESET & BASE
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #0f172a, #020617);
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+
+        /* ==========================
+           HEADER
+        ========================== */
+
+        header {
+            padding: 90px 20px 70px;
+            text-align: center;
+            border-bottom: 1px solid #1e293b;
+            background:
+                linear-gradient(180deg, rgba(37, 99, 235, 0.18), transparent),
+                #020617;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            margin-top: 14px;
+            font-size: 1.05rem;
+            color: #94a3b8;
+        }
+
+        .logo {
+            width: 105px !important;
+            height: auto !important;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+
+        /* ==========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(2, 6, 23, 0.92);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #1e293b;
+            text-align: center;
+            padding: 14px;
+        }
+
+        nav a {
+            color: #cbd5f5;
+            margin: 0 18px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* ==========================
+           HERO
+        ========================== */
+
+        .hero {
+            padding: 120px 20px 90px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.7rem;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: 18px auto 0;
+            color: #9ca3af;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 16px 46px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8);
+            color: #020617;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 45px rgba(56, 189, 248, 0.4);
+        }
+
+
+        /* ==========================
+           TRUST BADGES
+        ========================== */
+
+        .trust {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        .trust div {
+            padding: 26px;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            background: #020617;
+        }
+
+        .trust h4 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+
+        /* ==========================
+           SECTIONS
+        ========================== */
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 100px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 70px;
+        }
+
+
+        /* ==========================
+           CARDS
+        ========================== */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 36px;
+        }
+
+        .card {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 42px 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.6);
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 16px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: #9ca3af;
+        }
+
+
+        /* ==========================
+           PRICING
+        ========================== */
+
+        .amount {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-top: 14px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pricing-list {
+            margin-top: 22px;
+            list-style: none;
+            padding: 0;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .pricing-list li {
+            margin: 10px 0;
+        }
+
+        .pricing-list strong {
+            color: #e5e7eb;
+        }
+
+        .price-note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .pricing-highlight {
+            border-color: #2563eb;
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.12);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            margin-bottom: 14px;
+            border-radius: 20px;
+            background: rgba(37, 99, 235, 0.15);
+            color: #38bdf8;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        /* ==========================
+           GALLERY
+        ========================== */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .gallery-item {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        }
+
+
+        /* ==========================
+           ABOUT
+        ========================== */
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-container img {
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid #1e293b;
+        }
+
+        .about-text p {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+
+
+        /* ==========================
+           CONTACT / QUOTE FORM
+        ========================== */
+
+        form {
+            max-width: 520px;
+            margin: auto;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 15px;
+            margin-top: 16px;
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            color: #e5e7eb;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        form label {
+            display: block;
+            margin-top: 18px;
+            color: #cbd5e1;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .service-checkboxes {
+            margin-top: 16px;
+            text-align: left;
+        }
+
+        .service-checkboxes label {
+            display: block;
+            background: #020617;
+            border: 1px solid #1e293b;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            color: #e5e7eb;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .service-checkboxes label:hover {
+            border-color: #2563eb;
+            background: #071126;
+        }
+
+        .service-checkboxes input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #38bdf8;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 24px;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8);
+            color: #020617;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(56, 189, 248, 0.25);
+        }
+
+        .note {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .diagnostic-note {
+            max-width: 520px;
+            margin: 0 auto 35px;
+            padding: 18px;
+            border: 1px solid #1e40af;
+            border-radius: 12px;
+            background: rgba(37, 99, 235, 0.08);
+            text-align: center;
+        }
+
+        .diagnostic-note strong {
+            color: #38bdf8;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+
+        /* ==========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            background: #020617;
+            color: #9ca3af;
+        }
+
+
+        /* ==========================
+           ANIMATIONS
+        ========================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* ==========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            header h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero {
+                padding: 80px 20px 70px;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 70px 20px;
+            }
+
+            section h2 {
+                font-size: 2rem;
+                margin-bottom: 45px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-container img {
+                max-width: 260px;
+                margin: auto;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
+<!-- ==========================
+     HEADER
+========================== -->
+
 <header>
-    <img src="./images/logo.png" alt="Mountain Tech Solutions Logo" class="logo">
+
+    <img
+        src="./images/logo.png"
+        alt="Mountain Tech Solutions Logo"
+        class="logo"
+    >
 
     <h1>Mountain Tech Solutions</h1>
 
     <p>
-        Professional Virus Removal • Custom Gaming PCs • Computer Repairs & Upgrades
+        Professional Virus Removal • Custom Gaming PCs •
+        Computer Repairs & Upgrades
     </p>
+
 </header>
 
+
+<!-- ==========================
+     NAVIGATION
+========================== -->
+
 <nav>
+
     <a href="#gallery">Gallery</a>
+
     <a href="#pricing">Services & Pricing</a>
+
     <a href="#about">About</a>
+
     <a href="#contact">Contact</a>
+
 </nav>
+
+
+<!-- ==========================
+     HERO
+========================== -->
 
 <section class="hero reveal">
 
-    <h2>Reliable Tech | Smart Solutions | Peak Performance</h2>
+    <h2>
+        Reliable Tech | Smart Solutions | Peak Performance
+    </h2>
 
     <p>
         Professional PC repair, malware removal, computer optimization,
@@ -504,80 +576,164 @@ footer {
         and reliability — without the big-box repair shop price.
     </p>
 
-    <a href="#contact" class="btn">Get a Free Quote</a>
+    <a href="#contact" class="btn">
+        Get a Free Quote
+    </a>
+
 
     <div class="trust">
 
         <div>
-            <h4>✔ Professional Service</h4>
-            <p>Experienced technician with professional IT experience</p>
+
+            <h4>
+                ✔ Professional Service
+            </h4>
+
+            <p>
+                Experienced technician with professional IT experience
+            </p>
+
         </div>
 
-        <div>
-            <h4>⚡ Startup-Friendly Pricing</h4>
-            <p>Quality technical service at competitive local prices</p>
-        </div>
 
         <div>
-            <h4>🔒 Secure Handling</h4>
-            <p>Your computer and personal data are treated with care</p>
+
+            <h4>
+                ⚡ Startup-Friendly Pricing
+            </h4>
+
+            <p>
+                Quality technical service at competitive local prices
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                🔒 Secure Handling
+            </h4>
+
+            <p>
+                Your computer and personal data are treated with care
+            </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- ==========================
+     GALLERY
+========================== -->
+
 <section id="gallery" class="reveal">
 
-    <h2>Recent Builds</h2>
+    <h2>
+        Recent Builds
+    </h2>
+
 
     <div class="gallery-grid">
 
         <div class="gallery-item">
-            <img src="./images/BF360.PNG" alt="Custom Gaming PC Build">
+
+            <img
+                src="./images/BF360.PNG"
+                alt="Custom Gaming PC Build"
+            >
+
         </div>
 
+
         <div class="gallery-item">
-            <img src="./images/Musetex.PNG" alt="RGB Gaming PC Build">
+
+            <img
+                src="./images/Musetex.PNG"
+                alt="RGB Gaming PC Build"
+            >
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- ==========================
+     SERVICES & PRICING
+========================== -->
+
 <section id="pricing" class="reveal">
 
-    <h2>Services & Pricing</h2>
+    <h2>
+        Services & Pricing
+    </h2>
+
 
     <div class="grid">
+
 
         <!-- COMPUTER REPAIR -->
 
         <div class="card pricing-highlight">
 
-            <span class="badge">MOST POPULAR</span>
+            <span class="badge">
+                MOST POPULAR
+            </span>
 
-            <h3>🔧 Computer Repair</h3>
+            <h3>
+                🔧 Computer Repair
+            </h3>
+
 
             <ul class="pricing-list">
 
-                <li>Computer Diagnostic — <strong>$25</strong></li>
+                <li>
+                    Computer Diagnostic —
+                    <strong>$25</strong>
+                </li>
 
-                <li>PC Tune-Up — <strong>$59</strong></li>
+                <li>
+                    PC Tune-Up —
+                    <strong>$59</strong>
+                </li>
 
-                <li>Slow Computer Optimization — <strong>$69</strong></li>
+                <li>
+                    Slow Computer Optimization —
+                    <strong>$69</strong>
+                </li>
 
-                <li>Virus & Malware Removal — <strong>$79</strong></li>
+                <li>
+                    Virus & Malware Removal —
+                    <strong>$79</strong>
+                </li>
 
-                <li>Windows Repair — <strong>$79</strong></li>
+                <li>
+                    Windows Repair —
+                    <strong>$79</strong>
+                </li>
 
-                <li>Blue Screen / Boot Issues — <strong>$89</strong></li>
+                <li>
+                    Blue Screen / Boot Issues —
+                    <strong>$89</strong>
+                </li>
 
-                <li>Windows Reinstallation — <strong>$99</strong></li>
+                <li>
+                    Windows Reinstallation —
+                    <strong>$99</strong>
+                </li>
 
-                <li>Software Installation — <strong>$29</strong></li>
+                <li>
+                    Software Installation —
+                    <strong>$29</strong>
+                </li>
 
             </ul>
+
 
             <p class="price-note">
                 Diagnostic fee is credited toward an approved repair.
@@ -590,23 +746,45 @@ footer {
 
         <div class="card">
 
-            <h3>💻 Computer Setup</h3>
+            <h3>
+                💻 Computer Setup
+            </h3>
+
 
             <ul class="pricing-list">
 
-                <li>New PC Setup — <strong>$79</strong></li>
+                <li>
+                    New PC Setup —
+                    <strong>$79</strong>
+                </li>
 
-                <li>Old → New PC Transfer — <strong>$89</strong></li>
+                <li>
+                    Old → New PC Transfer —
+                    <strong>$89</strong>
+                </li>
 
-                <li>Email Setup — <strong>$29</strong></li>
+                <li>
+                    Email Setup —
+                    <strong>$29</strong>
+                </li>
 
-                <li>Microsoft Office Setup — <strong>$29</strong></li>
+                <li>
+                    Microsoft Office Setup —
+                    <strong>$29</strong>
+                </li>
 
-                <li>Printer Setup — <strong>$39</strong></li>
+                <li>
+                    Printer Setup —
+                    <strong>$39</strong>
+                </li>
 
-                <li>Home Wi-Fi Setup — <strong>$69</strong></li>
+                <li>
+                    Home Wi-Fi Setup —
+                    <strong>$69</strong>
+                </li>
 
             </ul>
+
 
             <p class="price-note">
                 Additional setup requirements may affect final pricing.
@@ -619,28 +797,54 @@ footer {
 
         <div class="card">
 
-            <h3>⚡ Performance & Upgrades</h3>
+            <h3>
+                ⚡ Performance & Upgrades
+            </h3>
+
 
             <ul class="pricing-list">
 
-                <li>RAM Installation — <strong>$49 + Parts</strong></li>
+                <li>
+                    RAM Installation —
+                    <strong>$49 + Parts</strong>
+                </li>
 
-                <li>SSD Installation — <strong>$59 + Parts</strong></li>
+                <li>
+                    SSD Installation —
+                    <strong>$59 + Parts</strong>
+                </li>
 
-                <li>GPU Installation — <strong>$69 + Parts</strong></li>
+                <li>
+                    GPU Installation —
+                    <strong>$69 + Parts</strong>
+                </li>
 
-                <li>Power Supply Installation — <strong>$69 + Parts</strong></li>
+                <li>
+                    Power Supply Installation —
+                    <strong>$69 + Parts</strong>
+                </li>
 
-                <li>Cooling / Fan Installation — <strong>$59 + Parts</strong></li>
+                <li>
+                    Cooling / Fan Installation —
+                    <strong>$59 + Parts</strong>
+                </li>
 
-                <li>CPU Installation — <strong>$89 + Parts</strong></li>
+                <li>
+                    CPU Installation —
+                    <strong>$89 + Parts</strong>
+                </li>
 
-                <li>General Hardware Installation — <strong>$49 + Parts</strong></li>
+                <li>
+                    General Hardware Installation —
+                    <strong>$49 + Parts</strong>
+                </li>
 
             </ul>
 
+
             <p class="price-note">
-                Parts are priced separately. Compatibility can be verified before purchase.
+                Parts are priced separately. Compatibility can be verified
+                before purchase.
             </p>
 
         </div>
@@ -650,25 +854,50 @@ footer {
 
         <div class="card">
 
-            <h3>🌐 Remote Support</h3>
+            <h3>
+                🌐 Remote Support
+            </h3>
+
 
             <ul class="pricing-list">
 
-                <li>Remote Diagnostic — <strong>$25</strong></li>
+                <li>
+                    Remote Diagnostic —
+                    <strong>$25</strong>
+                </li>
 
-                <li>Remote Support — <strong>$59/hr</strong></li>
+                <li>
+                    Remote Support —
+                    <strong>$59/hr</strong>
+                </li>
 
-                <li>Remote Virus Removal — <strong>$79</strong></li>
+                <li>
+                    Remote Virus Removal —
+                    <strong>$79</strong>
+                </li>
 
-                <li>Windows Troubleshooting — <strong>$59</strong></li>
+                <li>
+                    Windows Troubleshooting —
+                    <strong>$59</strong>
+                </li>
 
-                <li>Software Installation — <strong>$39</strong></li>
+                <li>
+                    Software Installation —
+                    <strong>$39</strong>
+                </li>
 
-                <li>Printer Troubleshooting — <strong>$49</strong></li>
+                <li>
+                    Printer Troubleshooting —
+                    <strong>$49</strong>
+                </li>
 
-                <li>Remote Training — <strong>$49/hr</strong></li>
+                <li>
+                    Remote Training —
+                    <strong>$49/hr</strong>
+                </li>
 
             </ul>
+
 
             <p class="price-note">
                 Remote services require a compatible internet connection.
@@ -677,66 +906,98 @@ footer {
         </div>
 
 
-        <!-- CUSTOM GAMING PCS -->
+        <!-- CUSTOM GAMING PC -->
 
         <div class="card pricing-highlight">
 
-            <span class="badge">CUSTOM BUILDS</span>
+            <span class="badge">
+                CUSTOM BUILDS
+            </span>
 
-            <h3>🎮 Custom Gaming PCs</h3>
+            <h3>
+                🎮 Custom Gaming PCs
+            </h3>
 
-            <div class="amount">$149 – $349+</div>
+
+            <div class="amount">
+                $149 – $349+
+            </div>
+
 
             <ul class="pricing-list">
 
-                <li>✔ Parts consultation</li>
+                <li>
+                    ✔ Parts consultation
+                </li>
 
-                <li>✔ Full system assembly</li>
+                <li>
+                    ✔ Full system assembly
+                </li>
 
-                <li>✔ Professional cable management</li>
+                <li>
+                    ✔ Professional cable management
+                </li>
 
-                <li>✔ BIOS configuration</li>
+                <li>
+                    ✔ BIOS configuration
+                </li>
 
-                <li>✔ Driver installation</li>
+                <li>
+                    ✔ Driver installation
+                </li>
 
-                <li>✔ Stress testing</li>
+                <li>
+                    ✔ Stress testing
+                </li>
 
-                <li>✔ Performance optimization</li>
+                <li>
+                    ✔ Performance optimization
+                </li>
 
             </ul>
 
+
             <p class="price-note">
-                Parts are separate. Final build price depends on system complexity.
+                Parts are separate. Final build price depends on system
+                complexity.
             </p>
 
         </div>
 
 
-        <!-- GAMING BUILD TIERS -->
+        <!-- BUILD TIERS -->
 
         <div class="card">
 
-            <h3>🎯 Build Service Tiers</h3>
+            <h3>
+                🎯 Build Service Tiers
+            </h3>
+
 
             <ul class="pricing-list">
 
                 <li>
-                    Basic Build — <strong>$149+</strong>
+                    Basic Build —
+                    <strong>$149+</strong>
                 </li>
 
                 <li>
-                    Performance Build — <strong>$199+</strong>
+                    Performance Build —
+                    <strong>$199+</strong>
                 </li>
 
                 <li>
-                    Premium / Complex Build — <strong>$249+</strong>
+                    Premium / Complex Build —
+                    <strong>$249+</strong>
                 </li>
 
                 <li>
-                    Custom Consultation — <strong>Free</strong>
+                    Custom Consultation —
+                    <strong>FREE</strong>
                 </li>
 
             </ul>
+
 
             <p class="price-note">
                 Every build is tested before it leaves Mountain Tech Solutions.
@@ -749,9 +1010,16 @@ footer {
 </section>
 
 
+<!-- ==========================
+     ABOUT
+========================== -->
+
 <section id="about" class="reveal">
 
-    <h2>About Me</h2>
+    <h2>
+        About Me
+    </h2>
+
 
     <div class="about-container">
 
@@ -759,6 +1027,7 @@ footer {
             src="./images/Profile_Headshot.JPG"
             alt="IT Technician portrait"
         >
+
 
         <div class="about-text">
 
@@ -768,11 +1037,13 @@ footer {
                 computer repair, and system administration.
             </p>
 
+
             <p>
                 I previously worked for the University of Florida in the
                 IT Help Desk department, supporting users with hardware,
                 software, and network-related issues.
             </p>
+
 
             <p>
                 I hold a Bachelor's degree in Information Systems Technology
@@ -788,14 +1059,33 @@ footer {
 </section>
 
 
+<!-- ==========================
+     CONTACT / QUOTE
+========================== -->
+
 <section id="contact" class="reveal">
 
-    <h2>Get a Free Quote</h2>
+    <h2>
+        Get a Free Quote
+    </h2>
+
+
+    <div class="diagnostic-note">
+
+        <strong>
+            $25 Diagnostic
+        </strong>
+
+        Your diagnostic fee is credited toward an approved repair.
+
+    </div>
+
 
     <form
         action="https://formspree.io/f/xvzjjnzq"
         method="POST"
     >
+
 
         <input
             type="hidden"
@@ -803,11 +1093,15 @@ footer {
             value="New Mountain Tech Solutions Quote Request"
         >
 
+
         <input
             type="text"
             name="_gotcha"
             style="display:none"
         >
+
+
+        <!-- NAME -->
 
         <input
             type="text"
@@ -816,6 +1110,9 @@ footer {
             required
         >
 
+
+        <!-- EMAIL -->
+
         <input
             type="email"
             name="email"
@@ -823,15 +1120,22 @@ footer {
             required
         >
 
+
+        <!-- PHONE -->
+
         <input
             type="tel"
             name="phone"
             placeholder="Phone Number"
         >
 
+
+        <!-- CATEGORY -->
+
         <label for="category">
             Service Category
         </label>
+
 
         <select
             id="category"
@@ -844,21 +1148,26 @@ footer {
                 Select a Category
             </option>
 
+
             <option value="repair">
                 🔧 Computer Repair
             </option>
+
 
             <option value="setup">
                 💻 Computer Setup
             </option>
 
+
             <option value="upgrades">
                 ⚡ Performance & Upgrades
             </option>
 
+
             <option value="remote">
                 🌐 Remote Support
             </option>
+
 
             <option value="gaming">
                 🎮 Custom Gaming PC
@@ -867,9 +1176,12 @@ footer {
         </select>
 
 
+        <!-- DYNAMIC SERVICES -->
+
         <label>
             Select Service(s)
         </label>
+
 
         <div
             id="services"
@@ -883,12 +1195,16 @@ footer {
         </div>
 
 
+        <!-- MESSAGE -->
+
         <textarea
             name="message"
             placeholder="Tell us about your computer issue or project"
             required
         ></textarea>
 
+
+        <!-- SUBMIT -->
 
         <button type="submit">
             Request My Free Quote
@@ -898,13 +1214,21 @@ footer {
 
 
     <p class="note">
+
         Select all services that apply. Your information is sent securely.
+
         <br>
+
         We'll review your request and respond as soon as possible.
+
     </p>
 
 </section>
 
+
+<!-- ==========================
+     FOOTER
+========================== -->
 
 <footer>
 
@@ -913,7 +1237,12 @@ footer {
 </footer>
 
 
+<!-- ==========================
+     JAVASCRIPT
+========================== -->
+
 <script>
+
 
 /* ==========================
    SCROLL REVEAL
@@ -921,27 +1250,37 @@ footer {
 
 const reveals = document.querySelectorAll(".reveal");
 
+
 function revealOnScroll() {
 
-    reveals.forEach(el => {
+    reveals.forEach(function(el) {
 
         const top = el.getBoundingClientRect().top;
 
+
         if (top < window.innerHeight - 100) {
+
             el.classList.add("visible");
+
         }
 
     });
 
 }
 
-window.addEventListener("scroll", revealOnScroll);
+
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
+
 
 revealOnScroll();
 
 
+
 /* ==========================
-   DYNAMIC SERVICE SELECTION
+   DYNAMIC SERVICE FORM
 ========================== */
 
 function updateServices() {
@@ -949,10 +1288,17 @@ function updateServices() {
     const category =
         document.getElementById("category").value;
 
+
     const serviceBox =
         document.getElementById("services");
 
+
+    /*
+       Clear the previous services
+    */
+
     serviceBox.innerHTML = "";
+
 
     let services = [];
 
@@ -1112,25 +1458,62 @@ function updateServices() {
 
     services.forEach(function(service) {
 
+
+        /*
+           Create label
+        */
+
         const label =
             document.createElement("label");
+
+
+        /*
+           Create checkbox
+        */
 
         const checkbox =
             document.createElement("input");
 
+
         checkbox.type = "checkbox";
 
-        checkbox.name = "services[]";
 
-        checkbox.value = service;
+        checkbox.name =
+            "services[]";
 
-        label.appendChild(checkbox);
+
+        checkbox.value =
+            service;
+
+
+        /*
+           Put checkbox inside label
+        */
 
         label.appendChild(
-            document.createTextNode(" " + service)
+            checkbox
         );
 
-        serviceBox.appendChild(label);
+
+        /*
+           Add service text
+        */
+
+        label.appendChild(
+            document.createTextNode(
+                " " + service
+            )
+        );
+
+
+        /*
+           Add completed label
+           to the form
+        */
+
+        serviceBox.appendChild(
+            label
+        );
 
     });
 
@@ -1138,6 +1521,7 @@ function updateServices() {
 
 </script>
 
+
 </body>
+
 </html>
-```
