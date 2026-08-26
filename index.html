@@ -441,6 +441,118 @@
             color: #6b7280;
         }
 
+        .consent-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 22px;
+            padding: 16px;
+            border: 1px solid #2563eb;
+            border-radius: 10px;
+            background: rgba(37,99,235,0.08);
+            color: #cbd5e1;
+            font-size: 13px;
+            line-height: 1.6;
+            cursor: pointer;
+        }
+
+        .consent-box input {
+            width: auto;
+            margin: 4px 0 0 0;
+            flex: 0 0 auto;
+        }
+
+        .consent-box a,
+        .legal-content a,
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .consent-box a:hover,
+        .legal-content a:hover,
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-intro {
+            max-width: 860px;
+            margin: -35px auto 35px;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        .legal-content {
+            max-width: 920px;
+            margin: auto;
+        }
+
+        .legal-content details {
+            margin-bottom: 18px;
+            background: rgba(2,6,23,0.95);
+            border: 1px solid #2563eb;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow:
+                0 0 7px rgba(37,99,235,0.22),
+                0 0 18px rgba(37,99,235,0.10);
+        }
+
+        .legal-content summary {
+            padding: 20px 24px;
+            color: #38bdf8;
+            font-weight: 700;
+            font-size: 1.08rem;
+            cursor: pointer;
+            list-style-position: inside;
+        }
+
+        .legal-body {
+            padding: 0 24px 24px;
+            color: #9ca3af;
+            text-align: left;
+        }
+
+        .legal-body h3 {
+            color: #e5e7eb;
+            margin: 22px 0 8px;
+            font-size: 1rem;
+        }
+
+        .legal-body p {
+            margin-bottom: 12px;
+        }
+
+        .legal-body ul {
+            margin: 8px 0 16px 22px;
+        }
+
+        .legal-body li {
+            margin-bottom: 7px;
+        }
+
+        .legal-updated {
+            margin-bottom: 18px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            margin: 0 7px;
+        }
+
+        .footer-disclaimer {
+            max-width: 900px;
+            margin: 16px auto 0;
+            font-size: 12px;
+            color: #64748b;
+        }
+
         footer {
             padding: 40px;
             text-align: center;
@@ -524,6 +636,7 @@
     <a href="#pricing">Services & Pricing</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
+    <a href="#legal">Legal</a>
 
 </nav>
 
@@ -915,6 +1028,23 @@
             required
         ></textarea>
 
+        <label class="consent-box">
+            <input
+                type="checkbox"
+                name="privacy_consent"
+                value="I agree"
+                required
+            >
+            <span>
+                I consent to Mountain Tech Solutions collecting, storing, and processing
+                the information I submit for quote requests, customer support, ticket
+                management, CRM records, service history, billing and invoicing, and
+                future service-related communications. I have reviewed the
+                <a href="#privacy-policy">Privacy Policy</a> and
+                <a href="#terms-and-conditions">Terms &amp; Conditions</a>.
+            </span>
+        </label>
+
         <button type="submit">
             Request My Free Quote
         </button>
@@ -923,15 +1053,220 @@
 
     <p class="note">
         Select all services that apply.
-        Your information is sent securely.
+        Your submission is sent through our form service and may be added to our CRM
+        and service records so we can manage your request and contact you about your services.
         <br>
         We'll review your request and respond as soon as possible.
     </p>
 
 </section>
 
+<section id="legal" class="reveal">
+
+    <h2>Legal Information</h2>
+
+    <p class="legal-intro">
+        Please review the policies below regarding website use, customer information,
+        and Mountain Tech Solutions services.
+    </p>
+
+    <div class="legal-content">
+
+        <details id="privacy-policy">
+            <summary>Privacy Policy</summary>
+            <div class="legal-body">
+                <p class="legal-updated">Last updated: August 26, 2026</p>
+
+                <p>
+                    Mountain Tech Solutions respects your privacy. This Privacy Policy
+                    explains how information submitted through this website is collected,
+                    used, stored, and shared in connection with quote requests and services.
+                </p>
+
+                <h3>Information We Collect</h3>
+                <p>When you submit the contact or quote form, we may collect information such as:</p>
+                <ul>
+                    <li>Your name, email address, and phone number.</li>
+                    <li>The service category and services you select.</li>
+                    <li>Information you provide about your computer, device, problem, or project.</li>
+                    <li>Communications and service history related to your request.</li>
+                </ul>
+
+                <h3>How We Use Your Information</h3>
+                <p>We may use the information you provide to:</p>
+                <ul>
+                    <li>Respond to quote requests and customer questions.</li>
+                    <li>Create and manage customer support tickets and service records.</li>
+                    <li>Add or update customer records in our customer relationship management (CRM) system.</li>
+                    <li>Schedule, provide, document, and follow up on requested services.</li>
+                    <li>Prepare invoices, maintain billing records, and process service-related payments.</li>
+                    <li>Contact you in the future when reasonably necessary regarding your current or prior service requests, open tickets, service history, billing, or other service-related matters.</li>
+                </ul>
+
+                <h3>Service Providers</h3>
+                <p>
+                    Website form submissions are processed through Formspree. Information
+                    may also be entered into Zoho or other business systems used by Mountain
+                    Tech Solutions for CRM, ticketing, customer records, billing, invoicing,
+                    and related business operations. These providers may process information
+                    according to their own privacy and security practices.
+                </p>
+
+                <h3>Sharing and Selling Information</h3>
+                <p>
+                    Mountain Tech Solutions does not sell customer personal information.
+                    Information may be shared with service providers when reasonably necessary
+                    to operate the business, provide requested services, process payments,
+                    maintain records, or comply with applicable law.
+                </p>
+
+                <h3>Data Retention and Security</h3>
+                <p>
+                    Customer records may be retained for as long as reasonably necessary for
+                    support, service history, billing, accounting, legal, fraud-prevention,
+                    and business-record purposes. Reasonable safeguards are used to protect
+                    information, but no online transmission or storage method can be guaranteed
+                    to be completely secure.
+                </p>
+
+                <h3>Your Choices</h3>
+                <p>
+                    You may contact Mountain Tech Solutions to ask about, correct, or request
+                    deletion of information associated with your customer record, subject to
+                    information we may need to retain for legitimate business or legal purposes.
+                </p>
+            </div>
+        </details>
+
+        <details id="terms-and-conditions">
+            <summary>Website Terms &amp; Conditions</summary>
+            <div class="legal-body">
+                <p class="legal-updated">Last updated: August 26, 2026</p>
+
+                <p>
+                    By using this website or submitting a request through it, you agree to
+                    these Terms &amp; Conditions. A separate service agreement or work authorization
+                    may apply before Mountain Tech Solutions performs paid work on customer equipment.
+                </p>
+
+                <h3>Website Information and Pricing</h3>
+                <p>
+                    Service descriptions and prices displayed on this website are provided for
+                    general informational and estimate purposes. Prices, availability, and service
+                    offerings may change. Final pricing may depend on diagnostic findings, parts,
+                    system condition, complexity, and the work authorized by the customer.
+                </p>
+
+                <h3>Diagnostics and Additional Work</h3>
+                <p>
+                    A diagnostic fee may apply as stated on the website. If additional problems
+                    or work are identified, Mountain Tech Solutions will make reasonable efforts
+                    to obtain customer approval before performing material work beyond the scope
+                    originally authorized.
+                </p>
+
+                <h3>Parts and Customer-Supplied Hardware</h3>
+                <p>
+                    Parts and hardware may be billed separately unless specifically included in
+                    a written quote. Compatibility cannot be guaranteed for customer-supplied
+                    parts, and manufacturer warranties or defects remain subject to the applicable
+                    manufacturer's or seller's terms.
+                </p>
+
+                <h3>Customer Data and Backups</h3>
+                <p>
+                    Customers are responsible for maintaining current backups of important data
+                    before service whenever possible. Computer repair, malware removal, operating
+                    system work, storage-device service, upgrades, and failing hardware can involve
+                    a risk of data loss or corruption. Any specific data-handling terms included
+                    in a signed service agreement or work authorization will also apply.
+                </p>
+
+                <h3>Payment</h3>
+                <p>
+                    Payment for completed services is due according to the approved quote, invoice,
+                    or service agreement. Additional parts, taxes, fees, or approved work may be
+                    added to the final amount when applicable.
+                </p>
+
+                <h3>Acceptable Website Use</h3>
+                <p>
+                    You may not misuse this website, submit knowingly false or unlawful information,
+                    attempt unauthorized access, interfere with website operation, or use the site
+                    in a manner that violates applicable law.
+                </p>
+
+                <h3>Limitation of Website Liability</h3>
+                <p>
+                    To the extent permitted by law, Mountain Tech Solutions is not responsible for
+                    indirect, incidental, special, or consequential losses arising solely from use
+                    of, or reliance on, general information provided on this website. Service-specific
+                    rights and obligations may be governed by a separate signed service agreement.
+                </p>
+
+                <h3>Governing Law</h3>
+                <p>
+                    These website terms are governed by the laws of the State of Georgia, without
+                    regard to conflict-of-law principles, except where applicable law requires otherwise.
+                </p>
+
+                <h3>Changes to These Terms</h3>
+                <p>
+                    Mountain Tech Solutions may update these website terms from time to time. The
+                    revised version becomes effective when posted with an updated revision date.
+                </p>
+            </div>
+        </details>
+
+        <details id="website-disclaimer">
+            <summary>Website Disclaimer</summary>
+            <div class="legal-body">
+                <p class="legal-updated">Last updated: August 26, 2026</p>
+
+                <p>
+                    Website content is provided for general informational purposes and does not
+                    constitute a guaranteed diagnosis, repair outcome, warranty, or binding quote.
+                    Computer problems vary by device and circumstance, and a proper diagnosis may
+                    be required before Mountain Tech Solutions can determine the appropriate service,
+                    price, or expected result.
+                </p>
+
+                <p>
+                    While reasonable efforts are made to keep website information accurate and
+                    current, Mountain Tech Solutions does not guarantee that all content, pricing,
+                    availability, or technical information will always be complete or error-free.
+                    Third-party products, software, websites, services, warranties, and policies are
+                    controlled by their respective providers.
+                </p>
+
+                <p>
+                    Nothing on this website replaces the terms of a written quote, invoice, service
+                    agreement, work authorization, manufacturer warranty, or other agreement that
+                    specifically applies to a customer or service.
+                </p>
+            </div>
+        </details>
+
+    </div>
+
+</section>
+
 <footer>
-    © 2026 Mountain Tech Solutions
+    <p>© 2026 Mountain Tech Solutions. All Rights Reserved.</p>
+
+    <p class="footer-links">
+        <a href="#privacy-policy">Privacy Policy</a> |
+        <a href="#terms-and-conditions">Terms &amp; Conditions</a> |
+        <a href="#website-disclaimer">Website Disclaimer</a>
+    </p>
+
+    <p class="footer-disclaimer">
+        By submitting a form through this website, you consent to Mountain Tech Solutions
+        collecting and storing the information you provide for quote requests, customer
+        support, CRM and ticket management, service records, billing and invoicing, and
+        future service-related communications. Website information and displayed pricing
+        are subject to the policies above and may change without notice.
+    </p>
 </footer>
 
 <script>
