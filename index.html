@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Mountain Tech Solutions | PC Repair, Virus Removal & Custom Builds</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mountain Tech Solutions provides affordable professional PC repair, virus removal, desktop upgrades, custom gaming PC builds, and remote computer support in North Georgia.">
+    <meta name="description" content="Mountain Tech Solutions provides professional PC repair, virus removal, desktop upgrades, custom gaming PC builds, remote computer support, and simple managed IT services for very small businesses in North Georgia.">
 
     <style>
         * {
@@ -625,7 +625,7 @@
     <h1>Mountain Tech Solutions</h1>
 
     <p>
-        PC Repair • Virus & Malware Removal • Desktop Upgrades • Custom Gaming PCs
+        PC Repair • Virus & Malware Removal • Desktop Upgrades • Custom Gaming PCs • Small Business Managed IT
     </p>
 
 </header>
@@ -713,9 +713,9 @@
     <h2>Services & Pricing</h2>
 
     <p class="service-intro">
-        Focused on the services Mountain Tech Solutions does best:
+        Focused on practical support for home users and very small businesses:
         PC repair, virus and malware removal, desktop hardware upgrades,
-        and custom gaming PC builds.
+        custom gaming PC builds, and simple managed IT support.
     </p>
 
     <div class="grid">
@@ -864,6 +864,35 @@
 
         </div>
 
+        <div class="card">
+
+            <span class="badge">SMALL BUSINESS</span>
+
+            <h3>🛡️ Managed IT Support</h3>
+
+            <div class="amount">$299/mo</div>
+
+            <ul class="pricing-list">
+
+                <li>✔ Up to 5 users &amp; 5 computers</li>
+                <li>✔ Remote IT support</li>
+                <li>✔ Microsoft 365 administration</li>
+                <li>✔ PC monitoring &amp; maintenance</li>
+                <li>✔ Antivirus / security management</li>
+                <li>✔ User onboarding &amp; offboarding</li>
+                <li>✔ Backup monitoring</li>
+                <li>✔ Priority business-hours support</li>
+
+            </ul>
+
+            <p class="price-note">
+                Microsoft 365, backup, security, hardware, onsite service, and other third-party
+                licensing or project costs are billed separately unless specifically included in writing.
+                Designed for very small businesses that need reliable day-to-day IT support without a full-time IT employee.
+            </p>
+
+        </div>
+
     </div>
 
 </section>
@@ -958,6 +987,12 @@
             placeholder="Phone Number"
         >
 
+        <input
+            type="text"
+            name="company"
+            placeholder="Company / Business Name (if applicable)"
+        >
+
         <label for="category">
             What can we help you with?
         </label>
@@ -983,6 +1018,10 @@
 
             <option value="gaming">
                 🎮 Custom Gaming PC Build
+            </option>
+
+            <option value="managed-it">
+                🛡️ Small Business Managed IT
             </option>
 
             <option value="other">
@@ -1024,7 +1063,7 @@
 
         <textarea
             name="message"
-            placeholder="Tell us about your computer issue or project"
+            placeholder="Tell us about your computer issue, project, or small-business IT needs"
             required
         ></textarea>
 
@@ -1088,7 +1127,7 @@
                 <ul>
                     <li>Your name, email address, and phone number.</li>
                     <li>The service category and services you select.</li>
-                    <li>Information you provide about your computer, device, problem, or project.</li>
+                    <li>Information you provide about your computer, device, problem, project, business, users, or managed IT needs.</li>
                     <li>Communications and service history related to your request.</li>
                 </ul>
 
@@ -1098,7 +1137,7 @@
                     <li>Respond to quote requests and customer questions.</li>
                     <li>Create and manage customer support tickets and service records.</li>
                     <li>Add or update customer records in our customer relationship management (CRM) system.</li>
-                    <li>Schedule, provide, document, and follow up on requested services.</li>
+                    <li>Schedule, provide, document, administer, monitor, and follow up on requested repair or managed IT services.</li>
                     <li>Prepare invoices, maintain billing records, and process service-related payments.</li>
                     <li>Contact you in the future when reasonably necessary regarding your current or prior service requests, open tickets, service history, billing, or other service-related matters.</li>
                 </ul>
@@ -1145,8 +1184,8 @@
 
                 <p>
                     By using this website or submitting a request through it, you agree to
-                    these Terms &amp; Conditions. A separate service agreement or work authorization
-                    may apply before Mountain Tech Solutions performs paid work on customer equipment.
+                    these Terms &amp; Conditions. A separate service agreement, managed services agreement, or work authorization
+                    may apply before Mountain Tech Solutions performs paid work or ongoing managed IT services.
                 </p>
 
                 <h3>Website Information and Pricing</h3>
@@ -1373,6 +1412,25 @@
             ];
 
         }
+
+
+        else if (category === "managed-it") {
+
+            services = [
+
+                "Managed IT - $299/month (up to 5 users & 5 computers)",
+                "Remote IT Support",
+                "Microsoft 365 Administration",
+                "PC Monitoring & Maintenance",
+                "Antivirus / Security Management",
+                "User Onboarding & Offboarding",
+                "Backup Monitoring",
+                "Priority Business-Hours Support"
+
+            ];
+
+        }
+
 
 
         else if (category === "other") {
