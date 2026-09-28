@@ -713,155 +713,65 @@
     <h2>Services & Pricing</h2>
 
     <p class="service-intro">
-        Focused on the services Mountain Tech Solutions does best:
-        PC repair, virus and malware removal, desktop hardware upgrades,
+        Simple, straightforward pricing for computer repair, upgrades,
         and custom gaming PC builds.
     </p>
 
     <div class="grid">
 
         <div class="card">
-
             <span class="badge">PC REPAIR</span>
-
             <h3>🔧 PC Repair & Virus Removal</h3>
 
             <ul class="pricing-list">
-
-                <li>
-                    Remote Diagnostic —
-                    <strong>$25</strong>
-                </li>
-
-                <li>
-                    In-Person Diagnostic —
-                    <strong>$25</strong>
-                </li>
-
-                <li>
-                    Remote Virus & Malware Removal —
-                    <strong>$69</strong>
-                </li>
-
-                <li>
-                    In-Person Virus & Malware Removal —
-                    <strong>$79</strong>
-                </li>
-
-                <li>
-                    PC Tune-Up —
-                    <strong>$59</strong>
-                </li>
-
-                <li>
-                    Slow Computer Optimization —
-                    <strong>$59</strong>
-                </li>
-
-                <li>
-                    Windows / Boot Issue Repair —
-                    <strong>$69+</strong>
-                </li>
-
-                <li>
-                    Windows Reinstallation —
-                    <strong>$89</strong>
-                </li>
-
-                <li>
-                    Software Installation —
-                    <strong>$25+</strong>
-                </li>
-
+                <li>Diagnostic — <strong>$25</strong></li>
+                <li>Virus &amp; Malware Removal — <strong>$69 Remote / $79 In-Person</strong></li>
+                <li>PC Tune-Up / Optimization — <strong>$59</strong></li>
+                <li>Windows Repair — <strong>$69+</strong></li>
+                <li>Windows Reinstallation — <strong>$89</strong></li>
             </ul>
 
             <p class="price-note">
-                Diagnostic fee may be applied toward an approved repair.
+                Not sure what you need? Select Diagnostic and describe the problem.
             </p>
-
         </div>
 
         <div class="card">
-
             <span class="badge">DESKTOP UPGRADES</span>
-
-            <h3>⚙️ Hardware Upgrades & Repairs</h3>
+            <h3>⚙️ PC Hardware Upgrades</h3>
 
             <ul class="pricing-list">
-
-                <li>
-                    RAM Installation —
-                    <strong>$39 + Parts</strong>
-                </li>
-
-                <li>
-                    SSD Installation —
-                    <strong>$49 + Parts</strong>
-                </li>
-
-                <li>
-                    GPU Installation —
-                    <strong>$59 + Parts</strong>
-                </li>
-
-                <li>
-                    Power Supply Installation —
-                    <strong>$59 + Parts</strong>
-                </li>
-
-                <li>
-                    Cooling / Fan Installation —
-                    <strong>$49 + Parts</strong>
-                </li>
-
-                <li>
-                    CPU Installation —
-                    <strong>$79 + Parts</strong>
-                </li>
-
-                <li>
-                    General Hardware Installation —
-                    <strong>$39 + Parts</strong>
-                </li>
-
-                <li>
-                    Hardware Troubleshooting —
-                    <strong>$59+</strong>
-                </li>
-
+                <li>Basic Upgrade Installation — <strong>$39+</strong></li>
+                <li>GPU / Power Supply Upgrade — <strong>$59+</strong></li>
+                <li>CPU Upgrade — <strong>$79+</strong></li>
+                <li>Hardware Troubleshooting — <strong>$59+</strong></li>
             </ul>
 
             <p class="price-note">
-                Parts are separate. Compatibility can be checked before purchase.
+                Parts are separate. RAM, SSD, cooling, GPU, power supply, CPU,
+                and other desktop upgrades are available.
             </p>
-
         </div>
 
         <div class="card">
-
             <span class="badge">CUSTOM BUILDS</span>
+            <h3>🎮 Custom Gaming PC Build</h3>
 
-            <h3>🎮 Custom Gaming PCs</h3>
+            <div class="amount">$149</div>
 
-            <div class="amount">$149+</div>
+            <p>
+                Complete custom PC assembly and setup for one straightforward price.
+            </p>
 
             <ul class="pricing-list">
-
-                <li>✔ Free build consultation</li>
-                <li>✔ Parts selection assistance</li>
-                <li>✔ Full system assembly</li>
-                <li>✔ Cable management</li>
-                <li>✔ BIOS configuration</li>
-                <li>✔ Driver installation</li>
-                <li>✔ Stress testing</li>
-                <li>✔ Performance optimization</li>
-
+                <li><strong>Complete Build Service — $149</strong></li>
+                <li>Free parts selection &amp; compatibility help</li>
+                <li>Assembly, setup, drivers, testing &amp; cable management included</li>
             </ul>
 
             <p class="price-note">
-                Parts are separate. Final labor price depends on build complexity.
+                Parts are separate.
             </p>
-
         </div>
 
     </div>
@@ -1329,18 +1239,11 @@
         if (category === "repair") {
 
             services = [
-
-                "Not Sure - Please diagnose my computer",
-                "Remote Diagnostic - $25",
-                "In-Person Diagnostic - $25",
-                "Remote Virus & Malware Removal - $69",
-                "In-Person Virus & Malware Removal - $79",
-                "PC Tune-Up - $59",
-                "Slow Computer Optimization - $59",
-                "Windows / Boot Issue Repair - $69+",
-                "Windows Reinstallation - $89",
-                "Software Installation - $25+"
-
+                "Diagnostic - $25",
+                "Virus & Malware Removal - $69 Remote / $79 In-Person",
+                "PC Tune-Up / Optimization - $59",
+                "Windows Repair - $69+",
+                "Windows Reinstallation - $89"
             ];
 
         }
@@ -1349,17 +1252,10 @@
         else if (category === "hardware") {
 
             services = [
-
-                "Not Sure - I need help choosing an upgrade",
-                "RAM Installation - $39 + Parts",
-                "SSD Installation - $49 + Parts",
-                "GPU Installation - $59 + Parts",
-                "Power Supply Installation - $59 + Parts",
-                "Cooling / Fan Installation - $49 + Parts",
-                "CPU Installation - $79 + Parts",
-                "General Hardware Installation - $39 + Parts",
+                "Basic Upgrade Installation - $39+",
+                "GPU / Power Supply Upgrade - $59+",
+                "CPU Upgrade - $79+",
                 "Hardware Troubleshooting - $59+"
-
             ];
 
         }
@@ -1368,19 +1264,7 @@
         else if (category === "gaming") {
 
             services = [
-
-                "Not Sure - I need help choosing a build",
-                "Free Custom Build Consultation",
-                "Basic Gaming PC Assembly - $149+",
-                "Performance Gaming PC Build - $199+",
-                "Premium / Complex Gaming PC Build - $249+",
-                "Parts Selection Assistance",
-                "Cable Management",
-                "BIOS Configuration",
-                "Driver Installation",
-                "Stress Testing",
-                "Performance Optimization"
-
+                "Custom Gaming PC Build - $149"
             ];
 
         }
